@@ -1,0 +1,204 @@
+ /* TODO PREMESSE */
+*{
+    --coloreChiaro:#dadada; 
+    --coloreIntermedio:#909090; 
+    --coloreScuro:#202020; 
+    --coloreTema:#ca5500; 
+    --semiTransparent:#20202080;
+
+    transition: 0.3s;
+}
+html,body{
+    margin: 0;
+    padding:0;
+    border: 0;
+    min-height:100%;
+    background:white;
+}
+ /* TODO LAYOUT */
+ /* TODO - navigation bar */
+nav{
+    position: sticky; top:0;
+
+    min-height: 50px;
+    background: var(--coloreTema);
+}
+    nav,nav>div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        nav>div>a{
+            padding:10px;
+            margin:0 5px;
+
+            color:var(--coloreScuro);
+            text-decoration:none;
+            font-size:20px;
+        }nav>div>a:hover{
+            color:var(--coloreChiaro);
+            border-bottom:2px solid var(--coloreChiaro);
+        }
+ /* TODO - header */
+header{
+    padding:0; margin:0;
+    background: url(https://i.etsystatic.com/39837022/r/il/b3883c/5476724815/il_fullxfull.5476724815_qox9.jpg);
+    background-position:center bottom 200px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;    
+}
+    header>div{
+        padding:50px;
+        padding-top:300px;
+        color:var(--coloreChiaro);
+        background: linear-gradient(45deg,var(--semiTransparent),var(--semiTransparent));
+        
+    }
+ /* TODO - section */
+section{
+    background: url(https://previews.123rf.com/images/niserin/niserin1405/niserin140500054/28047710-grunge-parete-di-legno-rustico-sfondo-vintage-dettagli-alti-qualit%C3%A0-hd.jpg);
+    background-position:center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    section>div{
+        padding-bottom:100px;
+        background:var(--semiTransparent);
+        color:var(--coloreChiaro);
+    }
+ /* TODO - footer */
+footer{
+    min-height: 500px;
+    padding: 100px;
+
+    background: var(--coloreScuro);
+    color:var(--coloreChiaro);
+}
+    footer column{
+        width: 200px;
+    }
+ /* TODO - row & column */
+row{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+row>column{
+    padding:5px;
+}
+ /* TODO - card */
+.card{
+    width:250px;
+    padding-top: 200px;
+
+    border:0;
+    border-radius:10px;
+    border:1px solid var(--coloreIntermedio);
+}.card:hover{
+    border:1px solid var(--coloreTema);
+    cursor: pointer;
+}
+    .card>*{
+        padding:10px;
+        margin:0;
+        
+        color: var(--coloreChiaro);
+        background:linear-gradient(45deg,var(--coloreScuro),transparent);
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
+    }
+    .card:hover *{
+        transition:0.3s;
+        background:var(--coloreTema);
+    }
+
+ /* TODO COMPONENTI */
+ /* TODO - testo */
+h1{ font-size:60px; }
+h2{ font-size:40px; }
+h3{ font-size:20px; }
+ /* TODO - pulsanti */
+button{
+    margin:0;
+    padding:10px;
+
+    font-size:20px;
+    cursor: pointer;
+
+    border:0;
+    border-radius:5px;
+    color:var(--coloreScuro);
+    background:var(--coloreChiaro);
+}button:hover{
+    color:var(--coloreChiaro);
+    background:var(--coloreScuro);
+}
+
+ /* TODO INDIVIDUALI */
+#pesce{
+    background: url(https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2022/05/secondi-piatti-di-pesce-1200x675.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#carne{
+    background: url(https://media-assets.lacucinaitaliana.it/photos/6364e27ec2dbe6dc935c72d4/4:3/w_1331,h_998,c_limit/filetto-di-maiale-allo-sciroppo-di-liegi,-friggitelli-e-cipolline.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#pizze{
+    background: url(https://www.berberepizza.it/wp-content/uploads/2023/10/BE_FOTO_HEAD_LANOSTRAPIZZA_IT_SPECKEG-1.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#giapponese{
+    background: url(https://rossettogroup.it/wp-content/uploads/R_Post_ART_Sushi_0607.png);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cinese{
+    background: url(https://www.fattoincasadabenedetta.it/wp-content/uploads/2021/10/Spaghetti-di-soia-1.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#tailandese{
+    background: url(https://www.lapastadij-momo.it/wp-content/uploads/2019/12/Cucina-thailandese.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#usa{
+    background: url(https://static.gamberorosso.it/2021/03/hamburger-768x614.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#araba{
+    background: url(https://www.bottegasicana.com/cdn/shop/articles/influenza-araba-cucina-siciliana-cous-cous.jpg?v=1636015527);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#vegana{
+    background: url(https://wips.plug.it/cips/paginegialle.it/magazine/cms/2018/07/cucina-vegana.jpg?w=744&h=418&a=c);
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
