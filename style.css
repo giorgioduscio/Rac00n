@@ -105,7 +105,7 @@ section{
     section>div{
         min-height: 1000px;
         padding:10px;
-        background:linear-gradient(transparent,var(--semiTransparent));
+        background:linear-gradient(transparent,var(--semiTransparent),var(--semiTransparent),var(--semiTransparent));
         color:var(--coloreChiaro);
     }
         section h1, section h2{
