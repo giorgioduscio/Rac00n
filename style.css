@@ -7,53 +7,92 @@
     --semiTransparent:#20202080;
 
     transition: 0.3s;
+    font-family:monospace;
 }
 html,body{
     margin: 0;
     padding:0;
     border: 0;
     min-height:100%;
-    background:white;
+    background:linear-gradient(45deg,var(--coloreScuro),black);
 }
  /* TODO LAYOUT */
- /* TODO - navigation bar */
-nav{
-    position: sticky; top:0;
+ /* TODO - navTop */
+navTop{
+    position: fixed; top:0px;
+    width:100%;
+    padding:5px 0;
 
-    min-height: 50px;
-    background: var(--coloreTema);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--coloreIntermedio);
 }
-    nav,nav>div{
+    navTop img{
+        width:40px;
+    }
+    searchBar{
+        padding-right: 5px;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-        nav>div>a{
-            padding:10px;
-            margin:0 5px;
 
+        background:var(--coloreChiaro);
+        border-radius: 50px;
+    }searchBar:hover{
+        background:var(--coloreIntermedio);
+    }
+        searchBar>input{
+            min-height:10px;
+            padding:10px;
+
+            border:0;
+            border-radius:50px;
+            
+            background:transparent;
             color:var(--coloreScuro);
-            text-decoration:none;
-            font-size:20px;
-        }nav>div>a:hover{
-            color:var(--coloreChiaro);
-            border-bottom:2px solid var(--coloreChiaro);
+        }searchBar>input::placeholder{
+            color:var(--coloreScuro);
+        }
+        searchBar>button{
+            border-radius:50px;
+
+            min-height:100%;
+            padding:15px;
+
+            background:url(https://png.pngtree.com/png-clipart/20230401/original/pngtree-magnifying-glass-line-icon-png-image_9015864.png);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-attachment: scroll;
         }
  /* TODO - header */
 header{
-    padding:0; margin:0;
-    background: url(https://i.etsystatic.com/39837022/r/il/b3883c/5476724815/il_fullxfull.5476724815_qox9.jpg);
-    background-position:center bottom 200px;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: contain;    
+    padding:0; 
+    margin:0;
+    background: var(--coloreTema);
+
 }
-    header>div{
-        padding:50px;
-        padding-top:300px;
-        color:var(--coloreChiaro);
-        background: linear-gradient(45deg,var(--semiTransparent),var(--semiTransparent));
-        
+    postHeader{
+        height:200px;
+        display: block;
+
+        background: url(/Header.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+    header>row{
+        padding:80px 20px 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+    header img{
+        height:300px;
+        border-radius:50%;
     }
  /* TODO - section */
 section{
@@ -64,21 +103,29 @@ section{
     background-size: cover;
 }
     section>div{
+        min-height: 1000px;
         padding:10px;
-        padding-bottom:100px;
-        background:var(--semiTransparent);
+        background:linear-gradient(transparent,var(--semiTransparent));
         color:var(--coloreChiaro);
     }
+        section h1, section h2{
+            text-align: center;
+        }
  /* TODO - footer */
 footer{
-    min-height: 500px;
-    padding: 100px;
-
-    background: var(--coloreScuro);
-    color:var(--coloreChiaro);
+    min-height:200px;
 }
-    footer column{
-        width: 200px;
+ /* TODO - navBottom */
+navBottom{
+    position: fixed; bottom:0px;
+    width:100%;
+}
+    navBottom>row{
+        justify-content: space-evenly;
+        background:var(--coloreTema);
+    }
+    navBottom img{
+        height:50px;
     }
  /* TODO - row & column */
 row{
@@ -87,12 +134,12 @@ row{
     align-items: top;
 }
     row>column{
-        padding:5px;
+        padding:0px;
     }
  /* TODO - card */
 .card{
-    width:250px;
-    padding-top: 200px;
+    width:150px;
+    padding-top: 100px;
 
     border:0;
     border-radius:10px;
@@ -119,7 +166,7 @@ row{
  /* TODO - testo */
 h1{ font-size:60px; }
 h2{ font-size:40px; }
-h3{ font-size:20px; border-bottom:1px solid;}
+h3{ font-size:20px; }
  /* TODO - pulsanti */
 button{
     margin:0;
@@ -133,8 +180,6 @@ button{
     color:var(--coloreScuro);
     background:var(--coloreChiaro);
 }button:hover{
-    color:var(--coloreChiaro);
-    background:var(--coloreScuro);
 }
 
  /* TODO INDIVIDUALI */
