@@ -205,6 +205,9 @@ button{
     margin:0;
     padding:10px;
 
+    display: flex;
+    align-items: center;
+
     font-size:20px;
     cursor: pointer;
 
@@ -214,6 +217,10 @@ button{
     background:var(--coloreIntermedio);
 }button:hover{
 
+}
+button img{
+    height:20px;
+    margin: 5px;
 }
 
  /* TODO INDIVIDUALI */
