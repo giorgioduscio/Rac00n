@@ -17,21 +17,31 @@ html,body{
     background:linear-gradient(45deg,var(--coloreScuro),black);
 }
  /* TODO LAYOUT */
- /* TODO - navTop */
-navTop{
-    position: fixed; top:0px;
-    width:100%;
-    padding:5px 0;
+ /* TODO - nav */
+nav{
+    padding: 5px;
+    background:var(--coloreTema);
+    border-top: 1px solid var(--coloreScuro);
+    border-bottom: 1px solid var(--coloreScuro);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: var(--coloreIntermedio);
 }
-    navTop img{
+nav.top{
+    position: sticky; top:0px;
+}
+ nav.bottom{
+    position: fixed; 
+    bottom:0px;
+    width:100%;
+}
+    nav img{
         width:40px;
     }
+    nav>row{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+ /* TODO - searchBar */
     searchBar{
         padding-right: 5px;
 
@@ -70,14 +80,24 @@ navTop{
         }
  /* TODO - header */
 header{
-    padding:0; 
+    padding:10px; 
     margin:0;
-    background: var(--coloreTema);
+    background: linear-gradient(0deg,var(--coloreTema),var(--coloreChiaro),var(--coloreChiaro));
 
 }
-    postHeader{
+    header>row{
+        justify-content: space-between;
+        text-align: center;
+    }
+    header img {
+        margin:0;
+        width:100%;
+        border-radius: 50px;
+    }
+    postHeader,footer{
         height:200px;
         display: block;
+        padding-bottom: 10px;
 
         background: url(/Header.png);
         background-position: bottom;
@@ -85,18 +105,14 @@ header{
         background-size: cover;
         background-attachment: scroll;
     }
-    header>row{
-        padding:80px 20px 10px;
-        flex-direction: column;
-        text-align: center;
+    postHeader h2{
+        margin: 0;
     }
-    header img{
-        height:300px;
-        border-radius:50%;
-    }
+
  /* TODO - section */
 section{
-    background: url(https://previews.123rf.com/images/niserin/niserin1405/niserin140500054/28047710-grunge-parete-di-legno-rustico-sfondo-vintage-dettagli-alti-qualit%C3%A0-hd.jpg);
+    /* background: url(https://previews.123rf.com/images/niserin/niserin1405/niserin140500054/28047710-grunge-parete-di-legno-rustico-sfondo-vintage-dettagli-alti-qualit%C3%A0-hd.jpg); */
+    background-color:var(--coloreIntermedio);
     background-position:center;
     background-attachment: scroll;
     background-repeat: no-repeat;
@@ -104,46 +120,47 @@ section{
 }
     section>div{
         min-height: 1000px;
-        padding:10px;
-        background:linear-gradient(transparent,var(--semiTransparent),var(--semiTransparent),var(--semiTransparent));
+        /* padding:10px; */
+        background:linear-gradient(transparent,var(--semiTransparent),var(--coloreScuro));
         color:var(--coloreChiaro);
     }
-        section h1, section h2{
-            text-align: center;
+
+        section p, section h1, section h2{
+            padding:10px;
         }
  /* TODO - footer */
 footer{
     min-height:200px;
 }
- /* TODO - navBottom */
-navBottom{
-    position: fixed; bottom:0px;
-    width:100%;
-}
-    navBottom>row{
-        justify-content: space-evenly;
-        background:var(--coloreTema);
-    }
-    navBottom img{
-        height:50px;
-    }
  /* TODO - row & column */
 row{
     display: flex;
     justify-content: center;
     align-items: top;
 }
-    row>column{
-        padding:0px;
+row.text{
+    background:radial-gradient(var(--coloreChiaro, var(--coloreScuro)));
+    padding:20px;
+}
+    row.text>column{
+        background: var(--coloreChiaro);
+        color: var(--coloreScuro);
+        border-radius: 10px;
+    }
+    row>h1, row>h2{
+        text-align: center;
+        padding: 10px;
+        margin: 0;
     }
  /* TODO - card */
 .card{
     width:150px;
     padding-top: 100px;
+    margin:0 5px;
 
-    border:0;
     border-radius:10px;
     border:1px solid var(--coloreIntermedio);
+    background: linear-gradient(45deg,var(--coloreScuro),var(--coloreTema),var(--coloreChiaro)) ;
 }.card:hover{
     border:1px solid var(--coloreTema);
     cursor: pointer;
@@ -167,6 +184,22 @@ row{
 h1{ font-size:60px; }
 h2{ font-size:40px; }
 h3{ font-size:20px; }
+p{ font-size:20px ;}
+ /* TODO - anchor */
+a{
+    margin:0;
+    padding:0px;
+    text-decoration: none;
+}
+a>p{
+    display: inline;
+    margin:0;
+    font-size:20px;
+    color: var(--coloreTema);
+}a>p:hover{
+    color: var(--coloreScuro);
+}
+
  /* TODO - pulsanti */
 button{
     margin:0;
@@ -177,9 +210,10 @@ button{
 
     border:0;
     border-radius:5px;
-    color:var(--coloreScuro);
-    background:var(--coloreChiaro);
+    color:var(--coloreChiaro);
+    background:var(--coloreIntermedio);
 }button:hover{
+
 }
 
  /* TODO INDIVIDUALI */
