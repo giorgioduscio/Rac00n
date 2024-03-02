@@ -5,6 +5,7 @@
     --coloreScuro:#202020; 
     --coloreTema:#ca5500; 
     --semiTransparent:#20202080;
+    --shadow:#00000020;
 
     transition: 0.3s;
     font-family:monospace;
@@ -19,10 +20,8 @@ html,body{
  /* TODO LAYOUT */
  /* TODO - nav */
 nav{
-    padding: 5px;
+    padding: 2px;
     background:var(--coloreTema);
-    border-top: 1px solid var(--coloreScuro);
-    border-bottom: 1px solid var(--coloreScuro);
 
 }
 nav.top{
@@ -35,6 +34,8 @@ nav.top{
 }
     nav img{
         width:40px;
+        padding:2px;
+        border-radius:10px;
     }
     nav>row{
         display: flex;
@@ -80,6 +81,7 @@ nav.top{
         }
  /* TODO - header */
 header{
+    min-height: 200px;
     padding:10px; 
     margin:0;
     background: linear-gradient(0deg,var(--coloreTema),var(--coloreChiaro),var(--coloreChiaro));
@@ -94,7 +96,7 @@ header{
         width:100%;
         border-radius: 50px;
     }
-    postHeader,footer{
+    postHeader{
         height:200px;
         display: block;
         padding-bottom: 10px;
@@ -119,18 +121,19 @@ section{
     background-size: cover;
 }
     section>div{
-        min-height: 1000px;
-        /* padding:10px; */
-        background:linear-gradient(transparent,var(--semiTransparent),var(--coloreScuro));
+        min-height: 500px;
+        padding-bottom: 100px;
         color:var(--coloreChiaro);
     }
 
-        section p, section h1, section h2{
+        section p, section h1, section h2, section h3, section h4, section h5, section h6{
             padding:10px;
+            margin: 10px 0 0;
         }
  /* TODO - footer */
 footer{
     min-height:200px;
+    background: linear-gradient(var(--coloreIntermedio),var(--coloreTema),var(--coloreTema));
 }
  /* TODO - row & column */
 row{
@@ -154,52 +157,47 @@ row.text{
     }
  /* TODO - card */
 .card{
-    width:150px;
-    padding-top: 100px;
-    margin:0 5px;
-
+    min-height: 100px; width: 150px;
+    margin:5px;
     border-radius:10px;
-    border:1px solid var(--coloreIntermedio);
-    background: linear-gradient(45deg,var(--coloreScuro),var(--coloreTema),var(--coloreChiaro)) ;
-}.card:hover{
-    border:1px solid var(--coloreTema);
-    cursor: pointer;
-}
-    .card>*{
-        padding:10px;
-        margin:0;
-        
-        color: var(--coloreChiaro);
-        background:linear-gradient(45deg,var(--coloreScuro),transparent);
-        border-bottom-left-radius:10px;
-        border-bottom-right-radius:10px;
-    }
-    .card:hover *{
-        transition:0.3s;
-        background:var(--coloreTema);
-    }
 
+    display: flex;
+    flex-direction: column;
+
+    border:2px solid var(--shadow); border-top:0;
+    color: var(--coloreChiaro);
+    background:linear-gradient(transparent,transparent,var(--semiTransparent)) ;
+}.card:hover{
+    border:2px solid var(--coloreTema); border-top:0;
+}
+    .card img{
+        height:100px;
+        border-radius:10px;
+    }
+    .card div{
+        width:150px;
+    }
+    .card h4{
+        margin: 0;
+        padding:5px;
+        font-size: 16px;
+    }
  /* TODO COMPONENTI */
  /* TODO - testo */
 h1{ font-size:60px; }
 h2{ font-size:40px; }
-h3{ font-size:20px; }
+h3{ font-size:25px; }
+h4{ font-size:20px; }
+h5{ font-size:15px; }
+h6{ font-size:10px; }
 p{ font-size:20px ;}
  /* TODO - anchor */
 a{
     margin:0;
     padding:0px;
+    color:var(--coloreTema);
     text-decoration: none;
 }
-a>p{
-    display: inline;
-    margin:0;
-    font-size:20px;
-    color: var(--coloreTema);
-}a>p:hover{
-    color: var(--coloreScuro);
-}
-
  /* TODO - pulsanti */
 button{
     margin:0;
@@ -207,6 +205,7 @@ button{
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     font-size:20px;
     cursor: pointer;
@@ -215,77 +214,16 @@ button{
     border-radius:5px;
     color:var(--coloreChiaro);
     background:var(--coloreIntermedio);
-}button:hover{
-
 }
-button img{
-    height:20px;
-    margin: 5px;
+button.square{
+    width:100%;
+    background:var(--coloreIntermedio);
+    border-radius:0;
+    border-bottom:1px solid var(--coloreScuro);
 }
+    button img{
+        height:20px;
+        margin: 5px;
+    }
 
  /* TODO INDIVIDUALI */
-#pesce{
-    background: url(https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2022/05/secondi-piatti-di-pesce-1200x675.jpg);
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#carne{
-    background: url(https://media-assets.lacucinaitaliana.it/photos/6364e27ec2dbe6dc935c72d4/4:3/w_1331,h_998,c_limit/filetto-di-maiale-allo-sciroppo-di-liegi,-friggitelli-e-cipolline.jpg);
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#pizze{
-    background: url(https://www.berberepizza.it/wp-content/uploads/2023/10/BE_FOTO_HEAD_LANOSTRAPIZZA_IT_SPECKEG-1.jpg);
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#giapponese{
-    background: url(https://rossettogroup.it/wp-content/uploads/R_Post_ART_Sushi_0607.png);
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#cinese{
-    background: url(https://www.fattoincasadabenedetta.it/wp-content/uploads/2021/10/Spaghetti-di-soia-1.jpg);
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#tailandese{
-    background: url(https://www.lapastadij-momo.it/wp-content/uploads/2019/12/Cucina-thailandese.jpg);
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-#usa{
-    background: url(https://static.gamberorosso.it/2021/03/hamburger-768x614.jpg);
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#araba{
-    background: url(https://www.bottegasicana.com/cdn/shop/articles/influenza-araba-cucina-siciliana-cous-cous.jpg?v=1636015527);
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#vegana{
-    background: url(https://wips.plug.it/cips/paginegialle.it/magazine/cms/2018/07/cucina-vegana.jpg?w=744&h=418&a=c);
-    background-position: center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
