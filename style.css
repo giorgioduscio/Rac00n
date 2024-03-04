@@ -20,9 +20,7 @@ html,body{
  /* TODO LAYOUT */
  /* TODO - nav */
 nav{
-    padding: 2px;
     background:var(--coloreTema);
-
 }
 nav.top{
     position: sticky; top:0px;
@@ -36,49 +34,49 @@ nav.top{
         width:40px;
         padding:2px;
         border-radius:10px;
+        border:2px solid transparent;
     }
     nav>row{
-        display: flex;
         align-items: center;
         justify-content: space-evenly;
     }
  /* TODO - searchBar */
-    searchBar{
-        padding-right: 5px;
+searchBar{
+    padding-right: 5px;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        background:var(--coloreChiaro);
-        border-radius: 50px;
-    }searchBar:hover{
-        background:var(--coloreIntermedio);
+    background:var(--coloreChiaro);
+    border-radius: 50px;
+}searchBar:hover{
+    background:var(--coloreIntermedio);
+}
+    searchBar>input{
+        min-height:10px;
+        padding:10px;
+
+        border:0;
+        border-radius:50px;
+        
+        background:transparent;
+        color:var(--coloreScuro);
+    }searchBar>input::placeholder{
+        color:var(--coloreScuro);
     }
-        searchBar>input{
-            min-height:10px;
-            padding:10px;
+    searchBar>button{
+        border-radius:50px;
 
-            border:0;
-            border-radius:50px;
-            
-            background:transparent;
-            color:var(--coloreScuro);
-        }searchBar>input::placeholder{
-            color:var(--coloreScuro);
-        }
-        searchBar>button{
-            border-radius:50px;
+        min-height:100%;
+        padding:15px;
 
-            min-height:100%;
-            padding:15px;
-
-            background:url(https://png.pngtree.com/png-clipart/20230401/original/pngtree-magnifying-glass-line-icon-png-image_9015864.png);
-            background-position: right;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-attachment: scroll;
-        }
+        background:url(https://png.pngtree.com/png-clipart/20230401/original/pngtree-magnifying-glass-line-icon-png-image_9015864.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-attachment: scroll;
+    }
  /* TODO - header */
 header{
     min-height: 200px;
@@ -123,6 +121,7 @@ section{
     section>div{
         min-height: 500px;
         padding-bottom: 100px;
+        border:1px solid transparent;
         color:var(--coloreChiaro);
     }
 
@@ -150,7 +149,7 @@ row.text{
         color: var(--coloreScuro);
         border-radius: 10px;
     }
-    row>h1, row>h2{
+    row>h1, row>h2, row>h3{
         text-align: center;
         padding: 10px;
         margin: 0;
@@ -182,6 +181,10 @@ row.text{
         padding:5px;
         font-size: 16px;
     }
+ /* TODO conteiner */
+slider{
+    display: inline;
+}
  /* TODO COMPONENTI */
  /* TODO - testo */
 h1{ font-size:60px; }
@@ -197,6 +200,16 @@ a{
     padding:0px;
     color:var(--coloreTema);
     text-decoration: none;
+}
+ /* TODO - tabella */
+table{
+    border:0;
+}
+table td{
+    padding:5px;
+    border:0;
+    background:var(--coloreChiaro);
+    color: var(--coloreScuro);
 }
  /* TODO - pulsanti */
 button{
