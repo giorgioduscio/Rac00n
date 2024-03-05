@@ -6,6 +6,16 @@ document.querySelector("nav.bottom").innerHTML=`
     </row>
 `;
 
+document.querySelector(".input").innerHTML=`
+    <h4>Quantità</h4>
+    <input type="text" placeholder="0">
+    <button>+</button>
+    <button>-</button>
+    <button>
+        <img src="https://cdn.icon-icons.com/icons2/2645/PNG/512/cart_icon_160296.png" alt="">   
+    </button>
+`;
+
 document.querySelector("nav.top").innerHTML=`
 <row>
     <searchBar>
