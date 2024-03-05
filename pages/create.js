@@ -5,7 +5,6 @@ document.querySelector("nav.bottom").innerHTML=`
         <a href="/pages/user.html"><img id="user" src="https://cdn-icons-png.freepik.com/512/6337/6337309.png"></a>
     </row>
 `;
-        // <a href=""><img id="comments" src="https://static.vecteezy.com/system/resources/previews/020/389/173/non_2x/bubble-speech-icon-png.png"></a>
 
 document.querySelector("nav.top").innerHTML=`
 <row>
