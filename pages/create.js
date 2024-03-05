@@ -11,7 +11,9 @@ document.querySelector("nav.top").innerHTML=`
 <row>
     <searchBar>
         <input type="text" placeholder="Ricerca">
-        <button></button>
+        <button>
+            <img src="https://cdn.icon-icons.com/icons2/621/PNG/512/magnifier-1_icon-icons.com_56924.png" alt="">
+        </button>
     </searchBar>
 </row>
 `;

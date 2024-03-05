@@ -1,9 +1,13 @@
  /* TODO PREMESSE */
 *{
-    --coloreChiaro:#dadada; 
-    --coloreIntermedio:#909090; 
-    --coloreScuro:#202020; 
-    --coloreTema:#ca5500; 
+    --c1:#dadada;
+    --c2:#c2c2c2;
+    --c3:#909090; 
+    --c4:#555555; 
+    --c5:#202020; 
+    --t1:#ca5500;
+    --t2:#0075ca;
+
     --semiTransparent:#20202080;
     --shadow:#00000020;
 
@@ -15,17 +19,18 @@ html,body{
     padding:0;
     border: 0;
     min-height:100%;
-    background:linear-gradient(45deg,var(--coloreScuro),black);
+    background:linear-gradient(45deg,var(--c5),black);
 }
  /* TODO LAYOUT */
  /* TODO - nav */
 nav{
-    background:var(--coloreTema);
+    background:var(--t1);
 }
 nav.top{
     position: sticky; top:0px;
+    padding:5px;
 }
- nav.bottom{
+nav.bottom{
     position: fixed; 
     bottom:0px;
     width:100%;
@@ -48,10 +53,10 @@ searchBar{
     justify-content: space-between;
     align-items: center;
 
-    background:var(--coloreChiaro);
+    background:var(--c1);
     border-radius: 50px;
 }searchBar:hover{
-    background:var(--coloreIntermedio);
+    background:var(--c3);
 }
     searchBar>input{
         min-height:10px;
@@ -61,130 +66,118 @@ searchBar{
         border-radius:50px;
         
         background:transparent;
-        color:var(--coloreScuro);
+        color:var(--c5);
     }searchBar>input::placeholder{
-        color:var(--coloreScuro);
+        color:var(--c5);
     }
     searchBar>button{
-        border-radius:50px;
-
-        min-height:100%;
-        padding:15px;
-
-        background:url(https://png.pngtree.com/png-clipart/20230401/original/pngtree-magnifying-glass-line-icon-png-image_9015864.png);
-        background-position: right;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-attachment: scroll;
+        padding: 0;
+        background:transparent;
     }
  /* TODO - header */
 header{
-    min-height: 200px;
-    padding:10px; 
-    margin:0;
-    background: linear-gradient(0deg,var(--coloreTema),var(--coloreChiaro),var(--coloreChiaro));
-
+     min-height: 100px;
+     padding: 30px 10px;
+     margin:0;
+     background: var(--t1);
+     color:var(--c1);
 }
-    header>row{
-        justify-content: space-between;
-        text-align: center;
+    .profile img{
+        width: 150px;
+        border-radius: 50%;
     }
-    header img {
-        margin:0;
-        width:100%;
-        border-radius: 50px;
+    .profile button{
+        width: 150px;
     }
-    postHeader{
-        height:200px;
-        display: block;
-        padding-bottom: 10px;
+header#image{
+    padding:0;
 
-        background: url(/Header.png);
-        background-position: bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: scroll;
-    }
-    postHeader h2{
-        margin: 0;
-    }
-
- /* TODO - section */
-section{
-    /* background: url(https://previews.123rf.com/images/niserin/niserin1405/niserin140500054/28047710-grunge-parete-di-legno-rustico-sfondo-vintage-dettagli-alti-qualit%C3%A0-hd.jpg); */
-    background-color:var(--coloreIntermedio);
+    background: url(https://previews.123rf.com/images/niserin/niserin1405/niserin140500054/28047710-grunge-parete-di-legno-rustico-sfondo-vintage-dettagli-alti-qualit%C3%A0-hd.jpg);
     background-position:center;
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: cover;
 }
-    section>div{
-        min-height: 500px;
-        padding-bottom: 100px;
-        border:1px solid transparent;
-        color:var(--coloreChiaro);
+header#image>div{
+    padding: 10px;
+    background: var(--semiTransparent);
+    color:var(--c1);
+}   #logo{
+        background: transparent;
+        color: var(--t1);
+        font-size: 25px;
+        font-family:fantasy;
     }
-
-        section p, section h1, section h2, section h3, section h4, section h5, section h6{
-            padding:10px;
-            margin: 10px 0 0;
-        }
+ /* TODO - section */
+section{
+    background-color:var(--c3);
+    min-height: 300px;
+    padding:30px 10px;
+    color:var(--c5);
+}
+    section p, section h1, section h2, section h3, section h4, section h5, section h6{
+        padding:10px;
+        margin: 10px 0 0;
+    }
  /* TODO - footer */
 footer{
     min-height:200px;
-    background: linear-gradient(var(--coloreIntermedio),var(--coloreTema),var(--coloreTema));
+    background: linear-gradient(var(--c3),var(--t1),var(--t1));
 }
+ /* TODO - form */
+form>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+    form *{
+        font-size:15px;
+    }
+    form label{
+        margin:20px 0 10px 0;
+        display: block;
+    }
+    form input, form a{
+        padding:10px;
+        display: block;
+    }
+    form input{
+        background: transparent;
+        border:1px solid var(--c5);
+        border-radius: 10px;
+    }input::placeholder{
+        color: var(--c5);
+    }
+    form button{
+        border-radius: 20px;
+        background:var(--t1);
+        color: var(--c1);
+    }
  /* TODO - row & column */
 row{
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: top;
 }
-row.text{
-    background:radial-gradient(var(--coloreChiaro, var(--coloreScuro)));
-    padding:20px;
-}
-    row.text>column{
-        background: var(--coloreChiaro);
-        color: var(--coloreScuro);
-        border-radius: 10px;
-    }
     row>h1, row>h2, row>h3{
         text-align: center;
         padding: 10px;
         margin: 0;
     }
- /* TODO - card */
-.card{
-    min-height: 100px; width: 150px;
-    margin:5px;
-    border-radius:10px;
-
+ /* TODO - sommario */
+.summary{
     display: flex;
     flex-direction: column;
+}
+    .summary>a{
+        padding: 100px 0 10px;
+        margin:5px 0;
 
-    border:2px solid var(--shadow); border-top:0;
-    color: var(--coloreChiaro);
-    background:linear-gradient(transparent,transparent,var(--semiTransparent)) ;
-}.card:hover{
-    border:2px solid var(--coloreTema); border-top:0;
-}
-    .card img{
-        height:100px;
-        border-radius:10px;
+        font-size: 20px;
+        text-align: center;
+        background: var(--semiTransparent);
+        color: var(--c1);
     }
-    .card div{
-        width:150px;
-    }
-    .card h4{
-        margin: 0;
-        padding:5px;
-        font-size: 16px;
-    }
- /* TODO conteiner */
-slider{
-    display: inline;
-}
  /* TODO COMPONENTI */
  /* TODO - testo */
 h1{ font-size:60px; }
@@ -198,44 +191,84 @@ p{ font-size:20px ;}
 a{
     margin:0;
     padding:0px;
-    color:var(--coloreTema);
+    color:var(--t1);
     text-decoration: none;
 }
  /* TODO - tabella */
 table{
-    border:0;
-}
-table td{
+    width: 100%;
     padding:5px;
-    border:0;
-    background:var(--coloreChiaro);
-    color: var(--coloreScuro);
+    font-size:15px;
 }
+    table th:first-child{
+        width: 80%;
+    }
+    table th{
+        font-size:20px;
+    }
+    table td,table td{
+        padding:5px;
+    }
+
+table.cart{
+    margin: 5px 0;
+    border-left:5px solid var(--c5);
+    background: var(--c3);
+    color: var(--c5);
+}
+    table.cart th{
+        text-align: left;
+    }
+        price{
+            font-weight: bold;
+            color: var(--t1);
+        }
+
+table.cronology{
+    margin:5px 0;
+    border:1px solid var(--c1);
+    border-radius:10px;
+    color: var(--c5);
+}
+    table.cronology th{
+        text-align: left;
+    }
+    table.cronology td{
+        padding-left: 20px;
+    }
+    table.cronology button{
+        padding:5px;
+        background: var(--t1);
+        color: var(--c1);
+    }
  /* TODO - pulsanti */
 button{
     margin:0;
-    padding:10px;
+    padding:5px;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
-    font-size:20px;
+    font-size:15px;
     cursor: pointer;
 
     border:0;
     border-radius:5px;
-    color:var(--coloreChiaro);
-    background:var(--coloreIntermedio);
+    color:var(--c5);
+    background:var(--c1);
 }
 button.square{
     width:100%;
-    background:var(--coloreIntermedio);
+    justify-content: space-between;
+
+    background:var(--c3);
     border-radius:0;
-    border-bottom:1px solid var(--coloreScuro);
+    border-bottom:1px solid var(--c5);
 }
     button img{
         height:20px;
+        width: 20px;
         margin: 5px;
     }
 

@@ -9,29 +9,39 @@
     </head>
     <body>
         <nav class="top"></nav><!-- TODO nav -->
-        <section>
+        <header>
+            <row>
+                <h3>Carrello attuale</h3>
+            </row>
+            <row>
+                <table class="cart">
+                    <tr> <th>Nome</th> <th><price>18.30€</price></th> </tr>
+                    <tr> <td>Una breve descrizione degli ingredienti</td> </tr>
+                </table>
+            </row>
             <div>
-                <h2>Ordinazioni</h2>
-                <h5>Qui puoi trovare la cronologia delle ordinazioni che hai fatto.</h5>
-                <row>
-                    <column>
-                        <h5>02/07/2023 <br> 16:34</h5>
-                    </column>
-                    <column>
-                        <h5>Pizza Margherita</h5>
-                    </column>
-                </row>
-                <row>
-                    <table>
-                        <tr>
-                            <td>02/07/2023</td> 
-                            <td>16:34</td>
-                            <td>Pizza Margherita</td> 
-                        </tr>
-                    </table>
-                </row>
-
+                <button>Ordina</button>
             </div>
+        </header>
+        <section>
+            <row>
+                <h3>Cronologia ordini</h3>
+            </row>
+            
+            <table class="cronology">
+                <tr>
+                    <th>Lun 02/07/2023 16:34</th> 
+                    <th><button>Fattura</button></th>
+                </tr>
+                <tr>
+                    <td>Pizza Margherita</td> 
+                    <td><price>14.60€</price></td>
+                </tr>
+                <tr>
+                    <td>Pizza Margherita</td> 
+                    <td><price>14.60€</price></td>
+                </tr>
+            </table>
         </section>
         <footer></footer><!-- TODO footer -->
         <nav class="bottom"></nav>
