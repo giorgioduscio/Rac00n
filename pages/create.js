@@ -6,16 +6,6 @@ document.querySelector("nav.bottom").innerHTML=`
     </row>
 `;
 
-document.querySelector(".input").innerHTML=`
-    <h4>Quantità</h4>
-    <input type="text" placeholder="0">
-    <button>+</button>
-    <button>-</button>
-    <button>
-        <img src="https://cdn.icon-icons.com/icons2/2645/PNG/512/cart_icon_160296.png" alt="">   
-    </button>
-`;
-
 document.querySelector("nav.top").innerHTML=`
 <row>
     <searchBar>
@@ -24,6 +14,7 @@ document.querySelector("nav.top").innerHTML=`
             <img src="https://cdn.icon-icons.com/icons2/621/PNG/512/magnifier-1_icon-icons.com_56924.png" alt="">
         </button>
     </searchBar>
+    <a href="/pages/feedback.html"><img src="https://png.pngtree.com/png-clipart/20230418/original/pngtree-bell-line-icon-png-image_9065349.png"></a>
 </row>
 `;
 

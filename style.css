@@ -19,34 +19,42 @@ html,body{
     padding:0;
     border: 0;
     min-height:100%;
-    background:linear-gradient(45deg,var(--c5),black);
+    background:var(--t1);
 }
  /* TODO LAYOUT */
  /* TODO - nav */
 nav{
-    background:var(--t1);
     z-index: 1;
 }
 nav.top{
+    padding-top: 3px;
     position: sticky; top:0px;
-    padding:5px;
 }
+    nav.top a>img{
+        height: 30px;
+        background: var(--c1);
+        border-radius: 50%;
+    }
+
 nav.bottom{
     position: fixed; 
     bottom:0px;
     width:100%;
+
+    background: var(--t1);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
     nav img{
-        width:40px;
-        padding:2px;
-        border-radius:10px;
-        border:2px solid transparent;
+        height:30px;
+        padding:3px;
+        border-bottom:2px solid transparent;
     }
     nav>row{
         align-items: center;
         justify-content: space-evenly;
     }
- /* TODO - searchBar */
+ /* TODO -> searchBar */
 searchBar{
     padding-right: 5px;
 
@@ -56,8 +64,6 @@ searchBar{
 
     background:var(--c1);
     border-radius: 50px;
-}searchBar:hover{
-    background:var(--c3);
 }
     searchBar>input{
         min-height:10px;
@@ -75,6 +81,10 @@ searchBar{
         padding: 0;
         background:transparent;
     }
+ /* TODO - pagine */
+ body#home img#home, body#user img#user, body#cart img#cart{ 
+    border-bottom:1px solid var(--c5); 
+}
  /* TODO - header */
 header{
      min-height: 100px;
@@ -113,7 +123,7 @@ header{
  /* TODO - section */
 section{
     background-color:var(--c3);
-    min-height: 300px;
+    min-height: 100vh;
     padding:30px 10px;
     color:var(--c5);
 }
@@ -162,53 +172,53 @@ form>div{
         background:var(--t1);
         color: var(--c1);
     }
- /* TODO - row & column */
+ /* TODO -> row */
 row{
     display: flex;
     justify-content:space-around;
     align-items: top;
 }
+ /* TODO -> column */
 column{
     display: flex;
     flex-direction: column;
     align-items: center; 
 }
- /* TODO - card ordinazioni */
-.card{
+ /* TODO -> amount */
+.card>.amount{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-    /* fix */
-    .card>.input{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .amount p, .amount h4, .amount h5,.amount h6{
+        margin: 0;
+        padding:0 5px;
     }
-        .input p, .input h4, .input h5,.input h6{
-            margin: 0;
-            padding:0 5px;
-        }
-        .input input{
-            width: 50px;
-            height:50px;
+    .amount .output{
+        height: 20px; width: 20px;
+        margin: 0;
 
-            background: var(--t1);
-            color: var(--c1);
-            border: 1px solid var(--c1);
-            border-radius: 50%;
-            text-align: center;
-            font-size: 20px;
-        }.input input::placeholder{ color: var(--c1); }
-        .input button{
-            min-width: 30px;
-            min-height: 30px;
-            margin-top:5px;
-            padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-            color: var(--c1);
-            background: var(--c4);
-            border-radius: 50px;
-        }
- /* TODO - show */
+        color: var(--c1);
+        background: var(--t1);
+        border-radius:50%;
+        border:1px solid; border-top: 0;
+    }
+    .amount button{
+        min-width: 30px;
+        min-height: 30px;
+        margin-top:5px;
+        padding: 5px;
+
+        color: var(--c1);
+        background: var(--c4);
+        border-radius:50%;
+        border:1px solid; border-top: 0;
+    }
+ /* TODO -> show */
     .show>a,.show>*{
         padding: 0;
         margin:5px 0;
@@ -243,8 +253,6 @@ h6{ font-size:5px; }
 p{ font-size:15px ;}
  /* TODO - anchor */
 a{
-    margin:0;
-    padding:0px;
     color:var(--t1);
     text-decoration: none;
 }
@@ -263,34 +271,42 @@ table{
     table td,table td{
         padding:5px;
     }
-
+ /* TODO -> table.cart */
 table.cart{
     margin: 5px 0;
     border-left:5px solid var(--c5);
-    background: var(--c3);
+    background: var(--c2);
     color: var(--c5);
 }
     table.cart th{
         text-align: left;
     }
-        price{
+        .price{
             font-weight: bold;
             color: var(--t1);
         }
-
-table.cronology{
+ /* TODO -> table.card */
+table.card{
     margin:5px 0;
-    border:1px solid var(--c1);
+    
     border-radius:10px;
+    border:1px solid var(--c5); border-top: 0;
+    background: var(--c2);
     color: var(--c5);
 }
-    table.cronology th{
+    table.card th{
         text-align: left;
     }
-    table.cronology td{
-        padding-left: 20px;
+    table.card td.name::before{
+        width: 10px;
+        height:10px;
+        margin-right: 5px;
+        display: inline-block;
+        background: var(--t1);
+        border-radius: 50%;
+        content: '';
     }
-    table.cronology button{
+    table.card button{
         padding:5px;
         background: var(--t1);
         color: var(--c1);
