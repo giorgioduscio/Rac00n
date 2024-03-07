@@ -14,10 +14,10 @@ for (let index = 0; index < amount.length; index++) {
 
 
 // TODO amount
-var output=document.querySelectorAll('.output');
-var increment=document.querySelectorAll('.increment');
-var decrement=document.querySelectorAll('.decrement');
-let counter=[];
+const output=document.querySelectorAll('.output');
+const increment=document.querySelectorAll('.increment');
+const decrement=document.querySelectorAll('.decrement');
+const counter=[];
 for (let index = 0; index < amount.length; index++) {
     counter.push(0); // inizializza tutti i contatori
 }
@@ -33,4 +33,21 @@ for (let index = 0; index < amount.length; index++) {
             output[index].innerText=counter[index]; //aggiorna l'output
         }
     })    
+}
+
+// TODO sendButton
+const sendButton=document.querySelectorAll("button.send");
+const nameFood=document.querySelectorAll(".nameFood");
+const cart=[];
+console.log(sendButton,nameFood);
+
+for (let index = 0; index < amount.length; index++) {
+    sendButton[index].addEventListener('click',function(){
+        if(counter[index]>=1){//se le porzioni sono almeno una
+            cart.push(`${counter[index]} porzioni di ${nameFood[index].innerText}`)
+
+            console.log(cart);
+            counter[index]=output[index].innerText=0;
+        }
+    })
 }

@@ -218,8 +218,11 @@ column{
         border-radius:50%;
         border:1px solid; border-top: 0;
     }
- /* TODO -> show */
-    .show>a,.show>*{
+    .amount .send{
+        background: var(--t1);
+    }
+ /* TODO -> sommary>a>img & h2 */
+    .sommary>a{
         padding: 0;
         margin:5px 0;
         
@@ -228,20 +231,66 @@ column{
         justify-content: flex-end;
         align-items: center; 
         
+        overflow: hidden;
         font-size: 20px;
         text-align: center;
         background: var(--semiTransparent);
         color: var(--c1);
     }
-        .show img{
+        .sommary img{
             width: 100%;
         }
-        .show h2,.show h3,.show p{
+
+        .sommary h2{
             margin: 0;
-            padding:5px 20px;
+            padding: 0;
+
             position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center; 
             background: var(--semiTransparent);
         }
+        .sommary>a,.sommary>a>h2{ width: 300px; height: 100px; border-radius: 10px; }
+        
+ /* TODO -> show>div>img & div>h2 & h2 & h6 */
+.show>div{
+    padding: 0;
+    margin:5px 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    
+    overflow: hidden;
+    font-size: 20px;
+    background: var(--semiTransparent);
+    color: var(--c1);
+}
+    .show>div>img{
+        height: 100%;
+    }
+    .show>div>div{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        background: var(--semiTransparent);
+        border: 1px solid;
+    }
+        .show>div>div>*{
+            padding: 0 5px;
+            margin: 0;
+        }
+    .show>div,.show>div>div{
+        width: 200px; height: 200px;
+        border-radius: 10px;
+    }
+
+
  /* TODO COMPONENTI */
  /* TODO - testo */
 h1{ font-size:40px; }
