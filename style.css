@@ -143,35 +143,7 @@ footer{
     min-height:100px;
     background: var(--t1);
 }
- /* TODO - form */
-form>div{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-    form *{
-        font-size:15px;
-    }
-    form label{
-        margin:20px 0 10px 0;
-        display: block;
-    }
-    form input, form a{
-        padding:10px;
-        display: block;
-    }
-    form input{
-        background: transparent;
-        border:1px solid var(--c5);
-        border-radius: 10px;
-    }input::placeholder{
-        color: var(--c5);
-    }
-    form button{
-        border-radius: 20px;
-        background:var(--t1);
-        color: var(--c1);
-    }
+
  /* TODO -> row */
 row{
     display: flex;
@@ -252,7 +224,7 @@ column{
             align-items: center; 
             background: var(--semiTransparent);
         }
-        .sommary>a,.sommary>a>h2{ width: 300px; height: 100px; border-radius: 10px; }
+        .sommary>a,.sommary>a>h2{ width: 300px; height: 100px; border-radius: 5px; }
         
  /* TODO -> show>div>img & div>h2 & h2 & h6 */
 .show>div{
