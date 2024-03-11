@@ -1,3 +1,19 @@
+img#profileImg{
+    width: 150px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+p#profileOutput{
+    text-align: center;
+}
+button#profileButton{
+    padding: 10px 20px;
+    background: var(--c2);
+    border-radius: 50px;
+}
+
+
+
 .dropdown{
 
 }
@@ -5,10 +21,12 @@
         width:100%;
         justify-content: space-between;
 
+        font-weight: bold;
         background:var(--c3);
         border-radius:0;
         border-bottom:1px solid var(--c5);
     }
+
     .dropContent{
         display: none;
         background: var(--c2);

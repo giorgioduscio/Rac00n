@@ -6,23 +6,12 @@ const voci=[
     ["Aggiungi account","Sicurezza","Esci"],
     ["Chiedi aiuto","Termini di servizio","Norme sulla privacy","Informazioni",]
 ]
-/*<h4>Usabilità</h4>
-<div class="dropdown">
-    <button class="dropButton">Modifica profilo</button>
-    <div class="content">
-        <p>Opsione</p>
-        <p>Opsione</p>
-        <p>Opsione</p>
-    </div>
-</div>*/
-
-
-let  write=document.querySelector('#app');
+let  pen=document.querySelector('#pen');
 for (let a = 0; a < gruppo.length; a++) {
-    write.innerHTML+=`<h4>${gruppo[a]}</h4>`;//mostra gruppo
-    
+    pen.innerHTML+=`<h4>${gruppo[a]}</h4>`;//mostra gruppo
+
     for (let b = 0; b < voci[a].length; b++) {
-        write.innerHTML+=`
+        pen.innerHTML+=`
             <div class="dropdown">
                 <button class="dropButton">${voci[a][b]}</button>
             </div>
@@ -43,18 +32,22 @@ for (let i = 0; i < dropdown.length; i++) {
     const dropButton=document.querySelectorAll(".dropButton");
     const dropContent=document.querySelectorAll(".dropContent");
 // TODO Aggiunge il triangolo ai pulsanti del dropdown
-const triangle=`https://www.freeiconspng.com/thumbs/arrow-down-icon-png/black-arrow-down-icon-png-16.png`;
+const triangleURL=`https://static-00.iconduck.com/assets.00/arrow-circle-right-icon-2048x2048-3qikwvvj.png`;
 for (let i = 0; i < dropButton.length; i++) {
-    dropButton[i].innerHTML+=`<img src="${triangle}">`; 
+    dropButton[i].innerHTML+=`<img src="${triangleURL}" class="triangle">`; 
 }
+const triangle=document.querySelectorAll('.triangle'); 
+console.log(triangle);
 
 // TODO dropdown al click, mostra dropContent
 for (let i = 0; i < dropdown.length; i++) {//per ogni dropdown
     dropButton[i].addEventListener('click',function(){//quando si clicca il pulsante
         if(dropContent[i].style.display=='block'){//se il contenuto è in mostra
             dropContent[i].style.display='none';//nascondi contenuto
+            triangle[i].style.transform="rotate(0deg)";//freccia a destra
         }else{
             dropContent[i].style.display='block'//mostra contenuto
+            triangle[i].style.transform="rotate(90deg)";//freccia in basso
         }
     })
 }
