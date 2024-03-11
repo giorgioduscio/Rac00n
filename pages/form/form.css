@@ -8,6 +8,7 @@
 }
     button#switch{
         padding: 10px;
+        background: linear-gradient(var(--c2),var(--c1));
     }
 
 form{

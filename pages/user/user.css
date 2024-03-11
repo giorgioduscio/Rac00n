@@ -1,0 +1,19 @@
+.dropdown{
+
+}
+    button.dropButton{
+        width:100%;
+        justify-content: space-between;
+
+        background:var(--c3);
+        border-radius:0;
+        border-bottom:1px solid var(--c5);
+    }
+    .dropContent{
+        display: none;
+        background: var(--c2);
+    }
+        .dropContent p{
+            margin: 0;
+            padding: 5px 10px;
+        }
