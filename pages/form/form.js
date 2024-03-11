@@ -1,8 +1,10 @@
+
 // switch
 const switchButton=document.querySelector("#switch");
-let switchIndex=true;//indice per capire lo stato accedi/registrati
+let switchRegistration=true;//indice per capire lo stato accedi/registrati
 const titleForm=document.querySelector("#titleForm");
-    console.log("Switch:",switchButton, switchIndex, titleForm);
+const forgotPassword=document.querySelector("#forgotPassword");
+    // console.log("Switch:",switchButton, switchRegistration, titleForm,forgotPassword);
 // Form system
 const form=document.querySelector("form"); 
 const username=document.querySelector("#username"); 
@@ -10,28 +12,33 @@ const indirizzo=document.querySelector("#indirizzo");
 const email=document.querySelector("#email"); 
 const password=document.querySelector("#password");
 const submit=document.querySelector("#submit");
-    console.log("Form system:",form,username,indirizzo,email,password,submit);
+    // console.log("Form system:",form,username,indirizzo,email,password,submit);
 // errori
 const errorMessage=document.querySelector("#errorMessage"); 
     errorMessage.style.display='none';
 
 // TODO setTitle
 function setTitle(){
-    if (switchIndex==true) { //se è affermativo
+    if (switchRegistration==true) { //se è affermativo REGISTRAZIONE
         titleForm.innerText='Registrati';//il titolo sarà di registrazione
         username.style.display=indirizzo.style.display='block';//mostra tutti i campi
+        forgotPassword.style.display='none';//non c'è password da recuperare
+        
 
         switchButton.innerText='Accedi';//il pulsante manderà all'accesso
-        switchIndex=false;//lo stato manderà all'accesso
-    } else {//se è negativo
+        switchRegistration=false;//lo stato manderà all'accesso
+    } else {//se è negativo ACCESSO
         titleForm.innerText='Accedi';//il titolo sarà di accesso
         username.style.display=indirizzo.style.display='none';//nasconde alcuni campi
-        
+        forgotPassword.style.display='block';//mostra recupero password
+
         switchButton.innerText='Registrati';//il pulsante manderà alla registrazione
-        switchIndex=true;//lo stato manderà alla registrazione
+        switchRegistration=true;//lo stato manderà alla registrazione
     }
 }setTitle();
-    switchButton.addEventListener("click",function(){//quando premi lo switch
+
+switchButton.addEventListener("click",function(){//quando premi lo switch
+    errorMessage.style.display='none';
     setTitle()
 })
 
@@ -40,24 +47,35 @@ form.addEventListener('submit',function(e){
     let messages=[]
     function redBorder(input){ input.style.border='1px solid red' }
 
-    //optimize email
-    if (indirizzo.value==='' || indirizzo.value===null) {
-        messages.push("L'indirizzo è obbligatorio")
-        redBorder(indirizzo)
+    if (switchRegistration===false) {
+        //optimize username
+        if (username.value==='' || username.value===null) {
+            messages.push("L'username è obbligatorio")
+            redBorder(username)
+        }
+        //optimize indirizzo
+        if (indirizzo.value==='' || indirizzo.value===null) {
+            messages.push("L'indirizzo è obbligatorio")
+            redBorder(indirizzo)
+        }
     }
     //optimize email
     if (email.value==='' || email.value===null) {
         messages.push("L'Email è obbligatoria")
         redBorder(email)
     }
+    if (email.value==/^[^ ]+@[^ ]+\.[a-z]{2,3}$/) {
+        messages.push("L'Email deve contenere il simbolo @")
+        redBorder(email)
+    }
 
     //optimize password
-    if(password.length<6 || password.length>16){
-        messages.push("La password deve contenere dai 6 ai 16 caratteri")
-        redBorder(password)
-    }
     if (password.value==='' || password.value===null) {
         messages.push("La password è obbligatoria")
+        redBorder(password)
+    }
+    if(password.value.length<6 || password.length>16){
+        messages.push("La password deve contenere dai 6 ai 16 caratteri")
         redBorder(password)
     }
 
@@ -68,3 +86,4 @@ form.addEventListener('submit',function(e){
         errorMessage.innerText=messages.join("\n")
     }
 })
+
