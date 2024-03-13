@@ -9,7 +9,7 @@ document.querySelector("nav.bottom").innerHTML=`
         <a href="/pages/home/home.html">
             <img id="home" src="${homeUrlImage}">
         </a>
-        <a href="/pages/cart.html">
+        <a href="/pages/cart/cart.html">
             <img id="cart" src="${cartUrlImage}">
             <div id="pointCart">!</div>
         </a>
@@ -27,7 +27,7 @@ document.querySelector("nav.top").innerHTML=`
                 <img src="${searchUrlImage}">
             </button>
         </searchBar>
-        <a href="/pages/feedback.html"><img id="feed" src="${feedUrlImage}"></a>
+        <a href="/pages/feedback/feedback.html"><img id="feed" src="${feedUrlImage}"></a>
     </row>
 `;
 
