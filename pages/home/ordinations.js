@@ -11,7 +11,6 @@ function ordinationItems(name, price, ingredients, urlImage) {
 }
 new ordinationItems("Margherita",4,"Pomodoro, mozzarella, basilico","https://ilfattoalimentare.it/wp-content/uploads/2022/12/Depositphotos_505971914_L-1.jpg")
 new ordinationItems("Romana",6,"Pomodoro, mozzarella, prociuto cotto","https://ilfattoalimentare.it/wp-content/uploads/2022/12/Depositphotos_505971914_L-1.jpg")
-console.log("arrayOrdinations:",arrayOrdinations);
 
 // TODO innerHTML
 // optimize righe
@@ -56,19 +55,19 @@ const amount=document.querySelectorAll('.amount');
     const increment=document.querySelectorAll('.increment');
     const decrement=document.querySelectorAll('.decrement');
 const counter=[];
-for (let index = 0; index < amount.length; index++) {
+for (let a = 0; a < amount.length; a++) {
     counter.push(0); // inizializza tutti i contatori
 }
 
-for (let index = 0; index < amount.length; index++) {
-    increment[index].addEventListener("click", function (){
-        counter[index]+=1; //incrementa
-        output[index].innerText=counter[index]; //aggiorna l'output
+for (let a = 0; a < amount.length; a++) {
+    increment[a].addEventListener("click", function (){
+        counter[a]+=1; //incrementa
+        output[a].innerText=counter[a]; //aggiorna l'output
     })
-    decrement[index].addEventListener("click", function (){ //quando clicca -
-        if (counter[index]>=1) { //se conta almeno una porzione
-            counter[index]-=1; //incrementa
-            output[index].innerText=counter[index]; //aggiorna l'output
+    decrement[a].addEventListener("click", function (){ //quando clicca -
+        if (counter[a]>=1) { //se conta almeno una porzione
+            counter[a]-=1; //incrementa
+            output[a].innerText=counter[a]; //aggiorna l'output
         }
     })    
 }
@@ -76,16 +75,17 @@ for (let index = 0; index < amount.length; index++) {
 // TODO sendButton
 const sendButton=document.querySelectorAll("button.send");
 const nameFood=document.querySelectorAll(".nameFood");
+const point=document.querySelector("#pointCart"); 
 const cart=[];
-console.log(sendButton,nameFood);
 
-for (let index = 0; index < amount.length; index++) {
-    sendButton[index].addEventListener('click',function(){
-        if(counter[index]>=1){//se le porzioni sono almeno una
-            cart.push(`${counter[index]} porzioni di ${nameFood[index].innerText}`)
+for (let a = 0; a < amount.length; a++) {
+    sendButton[a].addEventListener('click',function(){//quando premi il pulsante
+        if(counter[a]>=1){//se le porzioni sono almeno una
+            cart.push(`${counter[a]} porzioni di ${nameFood[a].innerText}`)
 
             console.log(cart);
-            counter[index]=output[index].innerText=0;
+            counter[a]=output[a].innerText=0;
+            point.style.display='block';
         }
     })
 }

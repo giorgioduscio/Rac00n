@@ -22,11 +22,9 @@ html,body{
     background:var(--t1);
 }
  /* TODO LAYOUT */
- /* TODO - nav */
-nav{
-    z-index: 1;
-}
-nav.top{
+ /* TODO - navigation */
+nav{ z-index: 1; }
+nav.top{ /* optimize TOP */
     padding-top: 3px;
     position: sticky; top:0px;
 }
@@ -36,10 +34,12 @@ nav.top{
         border-radius: 50%;
     }
 
-nav.bottom{
+nav.bottom{ /* optimize BOTTOM */
     position: fixed; 
     bottom:0px;
+
     width:100%;
+    padding-top: 2px;
 
     background: var(--t1);
     border-top-left-radius: 50px;
@@ -48,12 +48,30 @@ nav.bottom{
     nav img{
         height:30px;
         padding:3px;
-        border-bottom:2px solid transparent;
     }
     nav>row{
         align-items: center;
         justify-content: space-evenly;
     }
+ /* TODO -> pagine */
+ body#home img#home, body#user img#user, body#cart img#cart{ 
+    background: var(--c1); 
+    border-radius: 5px;
+}
+div#pointCart{
+    height:15px;
+    width: 15px;
+
+    position: absolute; top: 5px; left: 52%;
+    display: none;
+
+    text-align: center;
+    color: var(--c1);
+    font-weight: bold;
+
+    background: red;
+    border-radius: 50%;
+}
  /* TODO -> searchBar */
 searchBar{
     padding-right: 5px;
@@ -81,10 +99,7 @@ searchBar{
         padding: 0;
         background:transparent;
     }
- /* TODO - pagine */
- body#home img#home, body#user img#user, body#cart img#cart{ 
-    border-bottom:1px solid var(--c5); 
-}
+
  /* TODO - header */
 header{
      min-height: 100px;
