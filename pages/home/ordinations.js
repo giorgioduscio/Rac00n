@@ -1,21 +1,8 @@
-// TODO array
-const arrayOrdinations=[];
-function ordinationItems(name, price, ingredients, urlImage) {
-    this.name=name;
-    this.price=price;
-    this.ingredients=ingredients;
-    this.urlImage=urlImage;
-
-    this.addItems=function(){ arrayOrdinations.push(this); } 
-    this.addItems();
-}
-new ordinationItems("Margherita",4,"Pomodoro, mozzarella, basilico","https://ilfattoalimentare.it/wp-content/uploads/2022/12/Depositphotos_505971914_L-1.jpg")
-new ordinationItems("Romana",6,"Pomodoro, mozzarella, prociuto cotto","https://ilfattoalimentare.it/wp-content/uploads/2022/12/Depositphotos_505971914_L-1.jpg")
 
 // TODO innerHTML
 // optimize righe
 const writeOrdinations=document.querySelector(".writeOrdinations");//seleziona dove scrivere
-for (let a = 0; a < arrayOrdinations.length; a++) {//per tante volte quanto i records dell'array
+for (let a = 0; a < arrayProducts.length; a++) {//per tante volte quanto i records dell'array
     writeOrdinations.innerHTML+=`<row class="card"></row>`;//aggiungi una card
 }
 
@@ -25,12 +12,12 @@ for (let a = 0; a < card.length; a++) {//per tante volte quanto le card
     card[a].innerHTML=`
         <column class="show">
             <div>
-                <img src="${arrayOrdinations[a].urlImage}">
+                <img src="${arrayProducts[a].urlImage}">
                 <div>
-                    <h2 class="priceFood">${arrayOrdinations[a].price}€</h2>
+                    <h2 class="priceFood">${arrayProducts[a].price}€</h2>
                     <div>
-                        <h2 class="nameFood">${arrayOrdinations[a].name}</h2>
-                        <h4 class="ingredientsFood">${arrayOrdinations[a].ingredients}</h4>
+                        <h2 class="nameFood">${arrayProducts[a].name}</h2>
+                        <h4 class="ingredientsFood">${arrayProducts[a].ingredients}</h4>
                     </div>
                 </div>
             </div>

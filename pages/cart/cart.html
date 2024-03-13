@@ -4,27 +4,31 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/style.css">
-        <!-- <link rel="stylesheet" href="deviceAdapt.css"> -->
+        <link rel="stylesheet" href="/pages/cart/cart.css">
         <title>Rac00nEatsYou</title>
     </head>
     <body id="cart">
         <nav class="top"></nav><!-- TODO nav -->
+        
         <header>
-            <row>
+            <div class="writeCart">
                 <h2>Carrello attuale</h2>
-            </row>
-            <row>
-                <table class="cart">
-                    <tr> <th>Nome</th> <th class="price">18.30€</th> </tr>
-                    <tr> <td>Una breve descrizione degli ingredienti</td> </tr>
+                <table class="unit">
                     <tr> <th>Nome</th> <th class="price">18.30€</th> </tr>
                     <tr> <td>Una breve descrizione degli ingredienti</td> </tr>
                 </table>
-            </row>
+                <table class="unit">
+                    <tr> <th>Nome</th> <th class="price">18.30€</th> </tr>
+                    <tr> <td>Una breve descrizione degli ingredienti</td> </tr>
+                </table>
+            </div>
             <div>
                 <button>Ordina</button>
             </div>
         </header>
+
+
+
         <section>
             <row>
                 <h3>Cronologia ordini</h3>
@@ -75,6 +79,8 @@
         </section>
         <footer></footer><!-- TODO footer -->
         <nav class="bottom"></nav>
+
         <script src="/navBar.js"></script>
+        <script src="/pages/cart/cart.js"></script>
     </body>
 </html>
