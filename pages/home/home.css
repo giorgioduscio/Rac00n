@@ -1,13 +1,4 @@
- /* TODO -> sommary>a>img & h2 */
-/* 
-    <column class="summary">
-        <a href="">
-            <img>
-            <h2></h2>
-        </a>
-    </column>  
-
-*/
+ /* TODO  summary */
 .summary{ 
     border:1px solid; 
 }
@@ -25,7 +16,7 @@
         background: var(--semiTransparent);
         color: var(--c1);
     }
-        .summary img{ width: 100%; }
+        .summary img{ height: 100%; }
         .summary>a>h1{
         /* Testo semitrasparente */
             margin: 0;
@@ -40,82 +31,84 @@
         }
         .summary>a,.summary>a>h1{ 
         /* il ritaglio e il testo */
-            width: 300px; 
+            width: 250px; 
             height: 200px; 
         }
 
 
-
-    /* TODO -> amount */
-.card>.amount{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ /* TODO card */
+.card{
+    padding: 5px;
 }
-    .amount p, .amount h4, .amount h5,.amount h6{
-        margin: 0;
-        padding:0 5px;
-    }
-    .amount .output{
-        height: 20px; width: 20px;
-        margin: 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        color: var(--c1);
-        background: var(--t1);
-        border-radius:50%;
-        border:1px solid; border-top: 0;
-    }
-    .amount button{
-        min-width: 30px;
-        min-height: 30px;
-        margin-top:5px;
-        padding: 5px;
-
-        color: var(--c1);
-        background: var(--c4);
-        border-radius:50%;
-        border:1px solid; border-top: 0;
-    }
-    .amount .send{
-        background: var(--t1);
-    }
+    /* TODO -> show */
+    .show>div{
+        padding: 0;
         
- /* TODO -> show>div>img & div>h2 & h2 & h6 */
-.show>div{
-    padding: 0;
-    margin:5px 0;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center; 
-    
-    overflow: hidden;
-    font-size: 20px;
-    background: var(--semiTransparent);
-    color: var(--c1);
-}
-    .show>div>img{
-        height: 100%;
-    }
-    .show>div>div{
-        position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-
+        justify-content: flex-end;
+        align-items: center; 
+        
+        overflow: hidden;
+        font-size: 20px;
         background: var(--semiTransparent);
-        border: 1px solid;
+        color: var(--c1);
     }
-        .show>div>div>*{
-            padding: 0 5px;
-            margin: 0;
+        .show>div>img{ height: 100%; }
+        .show h2,.show h3,.show h4,.show h5,.show h6{ margin: 0; padding: 5px;}
+        .show>div>div{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            background: var(--semiTransparent);
+            border: 1px solid;
         }
-    .show>div,.show>div>div{
-        width: 200px; height: 200px;
-        border-radius: 10px;
+
+        .show>div,.show>div>div{
+            width: 230px; height: 200px;
+            border-radius: 5px;
+        }
+
+    /* TODO -> amount */
+    .card>.amount{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+        .amount p, .amount h4, .amount h5,.amount h6{
+            margin: 0;
+            padding-bottom:10px;
+        }
+        .amount .output{
+            height: 20px; width: 20px;
+            margin: 0;
+            padding: 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--c1);
+            background: var(--t1);
+            border-radius:50%;
+            border:1px solid; border-top: 0;
+        }
+        .amount button{
+            min-width: 30px;
+            min-height: 30px;
+            margin-top:5px;
+            padding: 5px;
+
+            font-weight: bold;
+            color: var(--c1);
+            background: var(--c4);
+            border-radius:50%;
+            border:1px solid; border-top: 0;
+        }
+        .amount .send{
+            background: var(--t1);
+        }
+        
