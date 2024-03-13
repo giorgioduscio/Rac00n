@@ -1,40 +1,44 @@
- /* TODO table.unit */
- table.unit{
-    margin: 5px 0;
-    border-left:5px solid var(--c5);
-    background: var(--c2);
-    color: var(--c5);
+ /* TODO table.product */
+.writeCart{
+    padding: 5px;
 }
-    table.unit th{
-        text-align: left;
-    }
-        .price{
-            font-weight: bold;
-            color: var(--t1);
-        }
- /* TODO table.card */
-table.card{
-    margin:5px 0;
-    
-    border-radius:10px;
-    border:1px solid var(--c5); border-top: 0;
-    background: var(--c2);
-    color: var(--c5);
-}
-    table.card th{
-        text-align: left;
-    }
-    table.card td.name::before{
-        width: 10px;
-        height:10px;
-        margin-right: 5px;
-        display: inline-block;
-        background: var(--t1);
-        border-radius: 50%;
-        content: '';
-    }
-    table.card button{
+    .product{
+        margin-bottom: 10px;
         padding:5px;
-        background: var(--t1);
-        color: var(--c1);
+        background: var(--c2);
+        color: var(--c5);
+        border-left: 5px solid var(--c3);
+    }    
+    .product row{
+            justify-content: space-between;
+        }
+
+.price{
+    font-weight: bold;
+    color: var(--t1);
+}
+
+
+ /* TODO cronology */
+.writeCronology{
+    padding:5px;
+}
+    .cronologyCard{
+        margin: 5px 0;
+        border: 1px solid ;
+        border-radius: 10px;
     }
+        .cronologyCard>row{
+            padding:5px 10px;
+            justify-content: space-between;
+        }
+.name::before{
+    content: '';
+    margin-right: 5px;
+    width: 8px;
+    height: 10px;
+    transform: rotate(40deg);
+    display: inline-block;
+    background: var(--t1);
+    border-radius: 50%;
+}

@@ -1,6 +1,6 @@
 // TODO array
 const arrayProducts=[];
-function ordinationItems(name, price, ingredients, urlImage) {
+function arrayProductsItem(name, price, ingredients, urlImage) {
     this.name=name;
     this.price=price;
     this.ingredients=ingredients;
@@ -9,32 +9,31 @@ function ordinationItems(name, price, ingredients, urlImage) {
     this.addItems=function(){ arrayProducts.push(this); } 
     this.addItems();
 }
-new ordinationItems(
+new arrayProductsItem(
     "Margherita",
     4,
     "Pomodoro, mozzarella, basilico",
     "https://ilfattoalimentare.it/wp-content/uploads/2022/12/Depositphotos_505971914_L-1.jpg"
 )
-
-new ordinationItems(
+new arrayProductsItem(
     "Romana",
     6,
     "Pomodoro, mozzarella, prociuto cotto",
     "https://www.pizzaontheroad.eu/wp-content/uploads/2019/09/ADL_4586.jpg"
 )
-new ordinationItems(
+new arrayProductsItem(
     "Vegan",
     6,
     "Pomodori ciliegini, lattuga, cetrolo",
     "https://www.buttalapasta.it/wp-content/uploads/2021/01/tempeh.jpg"
 )
-new ordinationItems(
+new arrayProductsItem(
     "Sushi",
     6,
     "",
     "https://www.susasushi.it/immagini/sushi-sashimi-barca.jpg"
 )
-new ordinationItems(
+new arrayProductsItem(
     "Tailandese",
     6,
     "",
