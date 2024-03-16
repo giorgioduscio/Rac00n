@@ -1,4 +1,4 @@
- /* TODO  summary */
+ /* TODO SUMMARY */
 .writeSummary{
         height: 150px;
         overflow-x:scroll;
@@ -7,7 +7,6 @@
         flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: center;
-        align-content: flex-start;
         gap: 10px;
     }
     /* CARD */
@@ -30,82 +29,91 @@
         .summaryCard, .summaryCard>a{
             height: 120px;
             width: 150px;
-            border-radius: 10px;
+            border-radius: 50px;
         }
+            .summaryCard>a>*:last-child{
+                padding-bottom: 5px;
+            }
 
- /* TODO card */
-.card{
-    padding: 5px;
+ /* TODO ORDINATIONS */
+.writeOrdinations{
+
 }
-    /* TODO -> show */
-    .show>div{
-        padding: 0;
-        
+    /* optimize ordinationRow */
+    .ordinationRow{
+        padding: 10px 0;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center; 
-        
-        overflow: hidden;
-        font-size: 20px;
-        background: var(--semiTransparent);
-        color: var(--c1);
+        justify-content: space-evenly;
     }
-        .show>div>img{ height: 100%; }
-        .show h2,.show h3,.show h4,.show h5,.show h6{ margin: 0; padding: 5px;}
-        .show>div>div{
-            position: absolute;
+        /* TODO -> show */
+        .show{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+        }
+        .show,.show>div{         
+            width: 200px; height: 160px;
+            border-radius: 10px;
+            position: relative;   
+
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-
-            background: var(--semiTransparent);
-            border: 1px solid;
+            justify-content: flex-end;
+            align-items: flex-start; 
         }
+            .show>div{
+                border: 1px solid;
+                background: linear-gradient(transparent,var(--semiTransparent),var(--semiTransparent));
+                color: var(--c1);
+            }
+                .show>div>*{
+                    text-align: left;
+                    padding: 5px;
+                }
+                .show .priceFood{
+                    position: absolute; top: 0; left: 0;
+                    width: 100px;
+                    padding:1px 10px;
 
-        .show>div,.show>div>div{
-            width: 230px; height: 200px;
-            border-radius: 5px;
-        }
-
-    /* TODO -> amount */
-    .card>.amount{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-        .amount p, .amount h4, .amount h5,.amount h6{
-            margin: 0;
-            padding-bottom:10px;
-        }
-        .amount .output{
-            height: 20px; width: 20px;
-            margin: 0;
-            padding: 5px;
-
+                    text-align: left;
+                    background: linear-gradient(90deg,var(--t1),transparent);
+                    border-top-left-radius: 10px;
+                }
+        /* TODO -> ordinationAmount */
+        .ordinationAmount{
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+        }
+            .ordinationAmount .output{
+                height: 30px; width: 30px;
+                margin: 0;
+                padding: 5px;
 
-            color: var(--c1);
-            background: var(--t1);
-            border-radius:50%;
-            border:1px solid; border-top: 0;
-        }
-        .amount button{
-            min-width: 30px;
-            min-height: 30px;
-            margin-top:5px;
-            padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-            font-weight: bold;
-            color: var(--c1);
-            background: var(--c4);
-            border-radius:50%;
-            border:1px solid; border-top: 0;
-        }
-        .amount .send{
-            background: var(--t1);
-        }
+                color: var(--c1);
+                background: var(--t1);
+                border-radius:50%;
+                border:1px solid; border-top: 0;
+            }
+            .ordinationAmount button{
+                min-width: 30px;
+                min-height: 30px;
+                margin-top:5px;
+                padding: 5px;
+
+                font-weight: bold;
+                color: var(--c1);
+                background: var(--c4);
+                border-radius:50%;
+                border:1px solid; border-top: 0;
+            }
+            .ordinationAmount .send{
+                background: var(--t1);
+            }
         

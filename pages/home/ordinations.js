@@ -3,50 +3,48 @@
 // optimize righe
 const writeOrdinations=document.querySelector(".writeOrdinations");//seleziona dove scrivere
 for (let a = 0; a < arrayProducts.length; a++) {//per tante volte quanto i records dell'array
-    writeOrdinations.innerHTML+=`<row class="card"></row>`;//aggiungi una card
+    writeOrdinations.innerHTML+=`<div class="ordinationRow"></div>`;//aggiungi una ordinationRow
 }
 
-// optimize card
-const card=document.querySelectorAll(".card");//seleziona tutte le card
-for (let a = 0; a < card.length; a++) {//per tante volte quanto le card
-    card[a].innerHTML=`
-        <column class="show">
+// optimize ordinationRow
+const ordinationRow=document.querySelectorAll(".ordinationRow");//seleziona tutte le ordinationRow
+for (let a = 0; a < ordinationRow.length; a++) {//per tante volte quanto le ordinationRow
+    ordinationRow[a].innerHTML=`
+        <div class="show">
             <div>
-                <img src="${arrayProducts[a].urlImage}">
-                <div>
-                    <h2 class="priceFood">${arrayProducts[a].price}€</h2>
-                    <div>
-                        <h2 class="nameFood">${arrayProducts[a].name}</h2>
-                        <h4 class="ingredientsFood">${arrayProducts[a].ingredients}</h4>
-                    </div>
-                </div>
+                <h2 class="priceFood">${arrayProducts[a].price}€</h2>
+                <h3 class="nameFood">${arrayProducts[a].name}</h3>
+                <h4 class="ingredientsFood">${arrayProducts[a].ingredients}</h4>
             </div>
-        </column>
-        <column class="amount">
-            <h5>Quantità</h5>
+        </div>
+        <div class="ordinationAmount">
             <h3 class="output">0</h3>
             <button class="increment">+</button>
             <button class="decrement">-</button>
             <button class="send">
                 <img src="https://cdn.icon-icons.com/icons2/2645/PNG/512/cart_icon_160296.png" alt="">   
             </button>
-        </column>
+        </div>
     `;//aggiungi il testo
+}
+// optimize immagini
+const show=document.querySelectorAll(".show");
+for (let a = 0; a < show.length; a++) {
+    show[a].style.backgroundImage=`url(${arrayProducts[a].urlImage})`
 }
 
 
-
-// TODO amount
-const amount=document.querySelectorAll('.amount');
+// TODO ordinationAmount
+const ordinationAmount=document.querySelectorAll('.ordinationAmount');
     const output=document.querySelectorAll('.output');
     const increment=document.querySelectorAll('.increment');
     const decrement=document.querySelectorAll('.decrement');
 const counter=[];
-for (let a = 0; a < amount.length; a++) {
+for (let a = 0; a < ordinationAmount.length; a++) {
     counter.push(0); // inizializza tutti i contatori
 }
 
-for (let a = 0; a < amount.length; a++) {
+for (let a = 0; a < ordinationAmount.length; a++) {
     increment[a].addEventListener("click", function (){
         counter[a]+=1; //incrementa
         output[a].innerText=counter[a]; //aggiorna l'output
@@ -59,13 +57,13 @@ for (let a = 0; a < amount.length; a++) {
     })    
 }
 
-// TODO sendButton
+// optimize sendButton
 const sendButton=document.querySelectorAll("button.send");
 const nameFood=document.querySelectorAll(".nameFood");
 const point=document.querySelector("#pointCart"); 
 const cart=[];
 
-for (let a = 0; a < amount.length; a++) {
+for (let a = 0; a < ordinationAmount.length; a++) {
     sendButton[a].addEventListener('click',function(){//quando premi il pulsante
         if(counter[a]>=1){//se le porzioni sono almeno una
             cart.push(`${counter[a]} porzioni di ${nameFood[a].innerText}`)
