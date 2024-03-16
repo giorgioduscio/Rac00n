@@ -55,7 +55,6 @@
         .show,.show>div{         
             width: 200px; height: 160px;
             border-radius: 10px;
-            position: relative;   
 
             display: flex;
             flex-direction: column;

@@ -16,6 +16,7 @@
     margin: 0;
     padding:0;
     border: 0;
+    position: relative;
 }
 html,body{
     min-height:100%;
@@ -58,20 +59,21 @@ nav.bottom{ /* optimize BOTTOM */
     background: var(--c1); 
     border-radius: 5px;
 }
-div#pointCart{
-    height:15px;
-    width: 15px;
+    div#pointCart{
+        height:15px;
+        width: 15px;
+        padding: 1px;
 
-    position: absolute; top: 5px; left: 52%;
-    display: none;
+        position: absolute; top: 0px; right: 0;
+        display: none;
 
-    text-align: center;
-    color: var(--c1);
-    font-weight: bold;
+        text-align: center;
+        color: var(--c5);
+        font-weight: bold;
 
-    background: red;
-    border-radius: 50%;
-}
+        background: var(--c1);
+        border-radius: 50%;
+    }
  /* TODO -> searchBar */
 searchBar{
     padding-right: 5px;
