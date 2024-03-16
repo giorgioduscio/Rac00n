@@ -1,12 +1,15 @@
 const writeSummary=document.querySelector(".writeSummary");
 for (let a = 0; a < arrayProducts.length; a++) {
     writeSummary.innerHTML+=`
-        <column class="summary">
+        <div class="summaryCard">
             <a href="">
-                <img src="${arrayProducts[a].urlImage}">
-                <h1>${arrayProducts[a].name}</h1>
+                <h3>${arrayProducts[a].name}</h3>
             </a>
-        </column>   
+        </div>   
     `;
 }
 
+const summaryCard=document.querySelectorAll(".summaryCard");
+for (let a = 0; a < summaryCard.length; a++) {
+    summaryCard[a].style.backgroundImage=`url(${arrayProducts[a].urlImage})`
+}
