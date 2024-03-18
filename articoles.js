@@ -1,10 +1,10 @@
 // TODO array
 const arrayProducts=[];
-function arrayProductsItem(name, price, ingredients, urlImage) {
+function arrayProductsItem(name, price, ingredients, imageUrl) {
     this.name=name;
     this.price=price;
     this.ingredients=ingredients;
-    this.urlImage=urlImage;
+    this.imageUrl=imageUrl;
 
     this.addItems=function(){ arrayProducts.push(this); } 
     this.addItems();
@@ -22,20 +22,20 @@ new arrayProductsItem(
     "https://www.pizzaontheroad.eu/wp-content/uploads/2019/09/ADL_4586.jpg"
 )
 new arrayProductsItem(
-    "Vegan",
-    6,
-    "Pomodori ciliegini, lattuga, cetrolo",
-    "https://www.buttalapasta.it/wp-content/uploads/2021/01/tempeh.jpg"
+    "San daniele",
+    6.60,
+    "Pomodoro, mozzarella, prociutto crudo, scaglie di grana padano",
+    "https://www.anticogatoleto.com/shop/wp-content/uploads/2021/02/sandaniele-min-scaled.jpeg"
 )
 new arrayProductsItem(
-    "Sushi",
-    6,
-    "",
-    "https://www.susasushi.it/immagini/sushi-sashimi-barca.jpg"
+    "Diavola",
+    6.70,
+    "Pomodoro, mozzarella, salame piccante",
+    "https://www.pizzarecipe.org/wp-content/uploads/2019/01/Pizza-Diavola.jpg"
 )
 new arrayProductsItem(
-    "Tailandese",
-    6,
-    "",
-    "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/7DE647CE-2E09-4CBE-88EE-CFFCC70D7440/Derivates/F8CA1C89-596A-4EC0-9A63-6505DDBD528C.jpg"
+    "Norvegese",
+    8.80,
+    "Mozzarella, salmone affumicato, pistacchio, formaggio spalmabile",
+    "https://3punto0restaurant.com/wp-content/uploads/2020/06/WhatsApp-Image-2023-03-17-at-20.01.53.jpeg"
 )
