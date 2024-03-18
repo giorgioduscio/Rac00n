@@ -1,216 +1,212 @@
  /* TODO PREMESSE */
-*{
-    --c1:#dadada;
-    --c2:#c2c2c2;
-    --c3:#909090; 
-    --c4:#555555; 
-    --c5:#202020; 
-    --t1:#ca5500;
-    --t2:#0075ca;
+    *{
+        --c1:#dadada;
+        --c2:#c2c2c2;
+        --c3:#909090; 
+        --c4:#555555; 
+        --c5:#202020; 
+        --t1:#ca5500;
+        --t2:#0075ca;
+        --semiTransparent:#20202080;
+        --shadow:#00000020;
 
-    --semiTransparent:#20202080;
-    --shadow:#00000020;
-
-    transition: 0.3s;
-    font-family:monospace;
-    margin: 0;
-    padding:0;
-    border: 0;
-    position: relative;
-}
-html,body{
-    min-height:100%;
-    background:var(--t1);
-}
+        transition: 0.3s;
+        margin: 0;
+        padding:0;
+        border: 0;
+        outline: none;
+        position: relative;
+        font-family:monospace;
+    }
+    html,body{
+        min-height:100%;
+        background:var(--t1);
+    }
  /* TODO LAYOUT */
- /* TODO - navigation */
-nav{ z-index: 1; }
-nav.top{ /* optimize TOP */
-    padding-top: 3px;
-    position: sticky; top:0px;
-}
-    nav.top a>img{
-        height: 30px;
-        background: var(--c1);
-        border-radius: 50%;
+    /* TODO - navigation */
+    nav{ z-index: 1; }
+    nav.top{ /* optimize TOP */
+        padding-top: 3px;
+        position: sticky; top:0px;
     }
-
-nav.bottom{ /* optimize BOTTOM */
-    position: fixed; 
-    bottom:0px;
-
-    width:100%;
-    padding-top: 2px;
-
-    background: var(--t1);
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-}
-    nav img{
-        height:30px;
-        padding:3px;
-    }
-    nav>row{
-        align-items: center;
-        justify-content: space-evenly;
-    }
- /* TODO -> pagine */
- body#home img#home, body#user img#user, body#cart img#cart{ 
-    background: var(--c1); 
-    border-radius: 5px;
-}
-    div#pointCart{
-        height:15px;
-        width: 15px;
-        padding: 1px;
-
-        position: absolute; top: 0px; right: 0;
-        display: none;
-
-        text-align: center;
-        color: var(--c5);
-        font-weight: bold;
-
-        background: var(--c1);
-        border-radius: 50%;
-    }
- /* TODO -> searchBar */
-searchBar{
-    padding-right: 5px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background:var(--c1);
-    border-radius: 50px;
-}
-    searchBar>input{
-        min-height:10px;
-        padding:10px;
-
-        border:0;
-        border-radius:50px;
-        
-        background:transparent;
-        color:var(--c5);
-    }searchBar>input::placeholder{
-        color:var(--c5);
-    }
-    searchBar>button{
-        padding: 0;
-        background:transparent;
-    }
-
- /* TODO - header */
-header{
-     min-height: 100px;
-     margin:0;
-     background: var(--t1);
-     color:var(--c1);
-}
-    header>*{ padding: 10px; }
-    .profile img{
-        width: 150px;
-        border-radius: 50%;
-    }
-    .profile button{
-        width: 150px;
-    }
-.intro{
-    background: url(https://previews.123rf.com/images/niserin/niserin1405/niserin140500054/28047710-grunge-parete-di-legno-rustico-sfondo-vintage-dettagli-alti-qualit%C3%A0-hd.jpg);
-    background-position:center;
-    background-attachment: scroll;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-    .intro h3{
-        padding: 10px;
-    }
-    .intro>div{
-        padding: 10px 0;
-        background: var(--semiTransparent);
-        color:var(--c1);
-    }   #logo{
-            background: transparent;
-            color: var(--t1);
-            font-size: 25px;
-            font-family:fantasy;
+        nav.top a>img{
+            height: 30px;
+            background: var(--c1);
+            border-radius: 50%;
         }
- /* TODO - section */
-section{
-    background-color:var(--c3);
-    min-height: 50vh;
-    padding:30px 0px;
-    color:var(--c5);
-}
 
- /* TODO - footer */
-footer::before{
-    content: '';
-    width: 100%;
-    height: 100px;
-    display: block;    
-    background: linear-gradient(var(--c3),var(--t1));
-}
-footer{
-    min-height:100px;
-    background: var(--t1);
-}
+    nav.bottom{ /* optimize BOTTOM */
+        position: fixed; 
+        bottom:0px;
 
- /* TODO -> row */
-row{
-    display: flex;
-    justify-content:space-around;
-    align-items: top;
-}
- /* TODO -> column */
-column{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
- 
+        width:100%;
+        padding-top: 2px;
 
+        background: var(--t1);
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+        nav img{
+            height:30px;
+            padding:3px;
+        }
+        nav>row{
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    /* TODO -> pagine */
+    body#home img#home, body#user img#user, body#cart img#cart{ 
+        background: var(--c1); 
+        border-radius: 5px;
+    }
+        div#pointCart{
+            height:15px;
+            width: 15px;
+            padding: 1px;
+
+            position: absolute; top: 0px; right: 0;
+            display: none;
+
+            text-align: center;
+            color: var(--c5);
+            font-weight: bold;
+
+            background: var(--c1);
+            border-radius: 50%;
+        }
+    /* TODO -> searchBar */
+    searchBar{
+        padding-right: 5px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background:var(--c1);
+        border-radius: 50px;
+    }
+        searchBar>input{
+            min-height:10px;
+            padding:10px;
+
+            border:0;
+            border-radius:50px;
+            
+            background:transparent;
+            color:var(--c5);
+        }searchBar>input::placeholder{
+            color:var(--c5);
+        }
+        searchBar>button{
+            padding: 0;
+            background:transparent;
+        }
+
+    /* TODO - header */
+    header{
+        min-height: 100px;
+        margin:0;
+        background: var(--t1);
+        color:var(--c1);
+    }
+        header>*{ padding: 10px; }
+        .profile img{
+            width: 150px;
+            border-radius: 50%;
+        }
+        .profile button{
+            width: 150px;
+        }
+    .intro{
+        background: url(https://previews.123rf.com/images/niserin/niserin1405/niserin140500054/28047710-grunge-parete-di-legno-rustico-sfondo-vintage-dettagli-alti-qualit%C3%A0-hd.jpg);
+        background-position:center;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+        .intro h3{
+            padding: 10px;
+        }
+        .intro>div{
+            padding: 10px 0;
+            background: var(--semiTransparent);
+            color:var(--c1);
+        }   #logo{
+                background: transparent;
+                color: var(--t1);
+                font-size: 25px;
+                font-family:fantasy;
+            }
+    /* TODO - section */
+    section{
+        background-color:var(--c3);
+        min-height: 50vh;
+        padding:30px 0px;
+        color:var(--c5);
+    }
+
+    /* TODO - footer */
+    footer::before{
+        content: '';
+        width: 100%;
+        height: 100px;
+        display: block;    
+        background: linear-gradient(var(--c3),var(--t1));
+    }
+    footer{
+        min-height:100px;
+        background: var(--t1);
+    }
+
+    /* TODO -> row */
+    row{
+        display: flex;
+        justify-content:space-around;
+        align-items: top;
+    }
+    /* TODO -> column */
+    column{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
 
  /* TODO COMPONENTI */
- /* TODO - testo */
-h1{ font-size:40px; }
-h2{ font-size:30px; }
-h3{ font-size:20px; }
-h4{ font-size:15px; }
-h5{ font-size:10px; }
-h6{ font-size:5px; }
-p{ font-size:15px ;}
-h1,h2,h3,h4,h5,h6{ text-align: center; }
- /* TODO - anchor */
-a{
-    color:var(--t1);
-    text-decoration: none;
-}
-
- /* TODO - pulsanti */
-button{
-    margin:0;
-    padding:5px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    font-size:15px;
-    cursor: pointer;
-
-    border:0;
-    border-radius:5px;
-    color:var(--c5);
-    background:var(--c1);
-}
-
-    button img{
-        height:20px;
-        width: 20px;
-        margin: 5px;
+    /* TODO - testo */
+    h1{ font-size:40px; }
+    h2{ font-size:30px; }
+    h3{ font-size:20px; }
+    h4{ font-size:15px; }
+    h5{ font-size:10px; }
+    h6{ font-size:5px; }
+    p{ font-size:15px ;}
+    h1,h2,h3,h4,h5,h6{ text-align: center; }
+    /* TODO - anchor */
+    a{
+        color:var(--t1);
+        text-decoration: none;
     }
 
- /* TODO INDIVIDUALI */
+    /* TODO - pulsanti */
+    button{
+        margin:0;
+        padding:5px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        font-size:15px;
+        cursor: pointer;
+
+        border:0;
+        border-radius:5px;
+        color:var(--c5);
+        background:var(--c1);
+    }
+
+        button img{
+            height:20px;
+            width: 20px;
+            margin: 5px;
+        }
