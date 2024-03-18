@@ -30,7 +30,7 @@ for (let a = 0; a < ordinationRow.length; a++) {//per tante volte quanto le ordi
 // optimize immagini
 const show=document.querySelectorAll(".show");
 for (let a = 0; a < show.length; a++) {
-    show[a].style.backgroundImage=`url(${arrayProducts[a].urlImage})`
+    show[a].style.backgroundImage=`url(${arrayProducts[a].imageUrl})`
 }
 
 
