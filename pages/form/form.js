@@ -1,10 +1,11 @@
 
-// switch
-const switchButton=document.querySelector("#switch");
+// pulsanti
+const signInButton=document.querySelector("button#signIn");
+const signUpButton=document.querySelector("button#signUp");
 let switchRegistration=true;//indice per capire lo stato accedi/registrati
 const titleForm=document.querySelector("#titleForm");
 const forgotPassword=document.querySelector("#forgotPassword");
-    // console.log("Switch:",switchButton, switchRegistration, titleForm,forgotPassword);
+    console.log("Pulsanti:",signInButton, signUpButton, titleForm,forgotPassword);
 // Form system
 const form=document.querySelector("form"); 
 const username=document.querySelector("#username"); 
@@ -23,22 +24,29 @@ function setTitle(){
         titleForm.innerText='Registrati';//il titolo sarà di registrazione
         username.style.display=indirizzo.style.display='block';//mostra tutti i campi
         forgotPassword.style.display='none';//non c'è password da recuperare
-        
 
-        switchButton.innerText='Accedi';//il pulsante manderà all'accesso
+        signInButton.style.background='var(--t1)';//il pulsante manderà all'accesso
+        signUpButton.style.background='var(--c3)';//il pulsante manderà all'accesso
         switchRegistration=false;//lo stato manderà all'accesso
     } else {//se è negativo ACCESSO
         titleForm.innerText='Accedi';//il titolo sarà di accesso
         username.style.display=indirizzo.style.display='none';//nasconde alcuni campi
         forgotPassword.style.display='block';//mostra recupero password
 
-        switchButton.innerText='Registrati';//il pulsante manderà alla registrazione
+        signInButton.style.background='var(--c3)';//il pulsante manderà all'accesso
+        signUpButton.style.background='var(--t1)';//il pulsante manderà all'accesso
         switchRegistration=true;//lo stato manderà alla registrazione
     }
 }setTitle();
 
-switchButton.addEventListener("click",function(){//quando premi lo switch
+signInButton.addEventListener("click",function(){//quando premi lo switch
     errorMessage.style.display='none';
+    switchRegistration=true
+    setTitle()
+})
+signUpButton.addEventListener("click",function(){//quando premi lo switch
+    errorMessage.style.display='none';
+    switchRegistration=false
     setTitle()
 })
 
