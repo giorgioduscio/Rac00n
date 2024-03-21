@@ -1,5 +1,5 @@
- /* TODO SUMMARY */
-.writeSummary{
+ /* TODO Index */
+.writeIndex{
         height: 150px;
         overflow-x:scroll;
 
@@ -10,30 +10,27 @@
         gap: 10px;
     }
     /* CARD */
-    .summaryCard{
+    a.IndexCard{
         background-position:center;
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment:scroll;
     } 
         /* CONTENUTO */
-        .summaryCard>a{
+        .IndexCard>*{
             display: flex;
             justify-content: space-evenly;
-            align-items: end;
+            align-items: center;
 
-            border: 1px solid;
-            background: linear-gradient(transparent, var(--semiTransparent));
+            background: var(--semiTransparent);
             color: var(--c1);
         }
-        .summaryCard, .summaryCard>a{
+
+        .IndexCard, .IndexCard>*{
             height: 120px;
             width: 150px;
             border-radius: 50px;
         }
-            .summaryCard>a>*:last-child{
-                padding-bottom: 5px;
-            }
 
  /* TODO ORDINATIONS */
 .writeOrdinations{
