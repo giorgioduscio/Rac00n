@@ -69,21 +69,29 @@ function arrayProductsObject(category, name, price, ingredients, imageUrl) {
     )
 
 
-// TODO arrayCategories
-const HHHarrayCategories=['Antipasti','Primi','Pizze','Secondi carne','Secondi pesce','Bibite'];
-const HHHarrayProducts=[
-    ['Patatine','Antipasto misto'],
-    ['Farfallette al salmone','Spaghetti al ragù'],
-    [margherita,romana],
-    ['Costolette di maiale','Salsiccia di pollo'],
-    ['Aragosta','Pesce misto'],
-    ['Acqua gassata','Acqua naturale'],
-]
-
-for (let a = 0; a < HHHarrayCategories.length; a++) {
-    console.log(HHHarrayCategories[a]);
-
-    for (let b = 0; b < HHHarrayProducts[a].length; b++) {
-        console.log(HHHarrayProducts[a][b]);
+// TODO arrayCategories: estrapola la categoria dall'array originario
+const arrayCategories=[];
+for (let a = 0; a < arrayProducts.length; a++) {
+    // se l'elemento dell'array è uguale a quello precedente 
+    if (a>0 && arrayProducts[a].category == arrayProducts[a-1].category) { 
+        // aggiungi un elemento all'array
+        arrayCategories.push(arrayProducts[a].category)
     }
 }
+console.log("array di categorie",arrayCategories);
+
+// TODO arrayProduct: drea un 'array di array di oggetti' dall'array originale
+const doubleArrayProducts=[]
+for (let a = 0; a < arrayCategories.length; a++) {
+    doubleArrayProducts.push([])
+}
+for (let a = 0; a < arrayCategories.length; a++) { // opera le categorie
+    for (let b = 0; b < arrayProducts.length; b++) { // opera gli ogetti
+        
+        // se l'elemento è della categoria, aggiungilo
+        if (arrayCategories[a] == arrayProducts[b].category) {
+            doubleArrayProducts[a].push( arrayProducts[b] )
+        }
+    }    
+}
+console.log(doubleArrayProducts[0]);
