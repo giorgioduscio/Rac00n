@@ -22,38 +22,42 @@
         min-height:100%;
         background:var(--t1);
     }
+
+    
  /* TODO LAYOUT */
     /* TODO - navigation */
     nav{ z-index: 1; }
-    nav.top{ /* optimize TOP */
-        padding-top: 3px;
+        nav>row{
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        nav img{
+            height:30px;
+            padding:3px;
+        }
+     /* optimize TOP */    
+    nav.top{
         position: sticky; top:0px;
+        padding: 5px;
     }
         nav.top a>img{
             height: 30px;
             background: var(--c1);
             border-radius: 50%;
         }
-
-    nav.bottom{ /* optimize BOTTOM */
+    /* optimize BOTTOM */
+    nav.bottom{
         position: fixed; 
         bottom:0px;
 
         width:100%;
         padding-top: 2px;
-
-        background: var(--t1);
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
     }
-        nav img{
-            height:30px;
-            padding:3px;
-        }
-        nav>row{
-            align-items: center;
-            justify-content: space-evenly;
-        }
+    nav.bottom{
+        background: var(--t1);
+    }
+
+
     /* TODO -> pagine */
     body#home img#home, body#user img#user, body#cart img#cart{ 
         background: var(--c1); 
