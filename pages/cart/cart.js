@@ -10,31 +10,61 @@ function Table(id,state) {
     this.pushTable();
 }
     new Table ('A123',false)
-    new Table ('G198',true)
-    new Table ('K491',true)
-    new Table ('R778',false)
-    new Table ('N973',true)
-    new Table ('Z456',true)
-    new Table ('C933',true)
-    new Table ('M951',false)
+    new Table ('B198',true)
+    new Table ('C491',true)
+    new Table ('D778',false)
+    new Table ('E973',true)
+    new Table ('F456',true)
+    new Table ('G933',true)
+    new Table ('H951',false)
 
-// TODO mostra tavoli disponibili
+// fix HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+
+// TODO crea tutti i tavoli 
 const generateTables=document.querySelector('.generateTables')
 for (let a = 0; a < arrayTables.length; a++) { //per ogni tavolo
-    let disponibility=arrayTables[a].state;
-    if (disponibility) {//se lo stato è disponibile
-        generateTables.innerHTML+=`<div class="tableItem">${arrayTables[a].id}</div>`;
-    }// optimize mostra il tavolo disponibile
+    generateTables.innerHTML+=`<div class="tableItem">${arrayTables[a].id}</div>`;
+}    
+const tableItem=document.querySelectorAll('.tableItem');
+
+// TODO mostra tutti i tavoli
+function showAllTables() {
+    for (let a = 0; a < arrayTables.length; a++) {
+        tableItem[a].style.display='flex'; // optimize 
+    }
+    generateTables.style.justifyContent='flex-start';// giustificare i tavoli
 }
+// TODO nascondi tavoli occupati
+function showsOnlyAvailableTables() {
+    for (let a = 0; a < arrayTables.length; a++) {
+        if (!arrayTables[a].state) {//se lo stato è disponibile
+            tableItem[a].style.display='none'; // optimize 
+        }
+    }
+} showsOnlyAvailableTables()
 
 // TODO seleziona tavolo
-const tableItem=document.querySelectorAll('.tableItem');
+let tableFocus=true;
+
 for (let a = 0; a < tableItem.length; a++) {//per ogni tavolo disponibile
-    tableItem[a].addEventListener('click',function(){//quando uno viene cliccato
-        console.log(tableItem[a]);
-        /*
-        nasconde tutti i tavoli
-        evidenzia il tavolo selezionato
-        */
+    tableItem[a].addEventListener('click',function(){//quando uno di questi viene cliccato
+        
+        if (tableFocus==true) {//TRUE se non avevi ancora selezionato alcun tavolo
+            //nasconde tutti i tavoli
+            tableItem.forEach(element => {
+                element.style.display='none';
+            });
+            //evidenzia solo il tavolo selezionato
+            tableItem[a].style.display='flex';
+            generateTables.style.justifyContent='space-evenly';// giustificare i tavoli
+            tableFocus=false;
+        } 
+        else {//FALSE se avevi già selezionato un tavolo, ripristina la schermata
+            // genera tutti i tavoli
+            showAllTables()
+            // mostra solo tavoli disponibili
+            showsOnlyAvailableTables()
+            tableFocus=true;
+        }
     })
 }
