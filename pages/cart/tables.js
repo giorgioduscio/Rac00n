@@ -14,9 +14,18 @@ function Table(id,state) {
     new Table ('C491',true)
     new Table ('D778',false)
     new Table ('E973',true)
+
     new Table ('F456',true)
     new Table ('G933',true)
     new Table ('H951',false)
+    new Table ('I777',true)
+    new Table ('J792',true)
+    
+    new Table ('K624',true)
+    new Table ('L354',true)
+    new Table ('M984',true)
+    new Table ('N194',true)
+    new Table ('O276',true)
 
 // fix HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 
@@ -56,10 +65,10 @@ for (let a = 0; a < tableItem.length; a++) {//per ogni tavolo disponibile
             });
             //evidenzia solo il tavolo selezionato
             tableItem[a].style.display='flex';
-            generateTables.style.justifyContent='space-evenly';// giustificare i tavoli
+            // giustificare i tavoli
+            generateTables.style.justifyContent='space-evenly';
             tableFocus=false;
-        } 
-        else {//FALSE se avevi già selezionato un tavolo, ripristina la schermata
+        } else {//FALSE se avevi già selezionato un tavolo, ripristina la schermata
             // genera tutti i tavoli
             showAllTables()
             // mostra solo tavoli disponibili
