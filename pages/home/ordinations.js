@@ -1,35 +1,52 @@
 
 // TODO innerHTML
+// writeOrdinations > generateTitleCategories > ordinationRow > show & ordinationAmount
+// optimize titoli di categoria
+const writeOrdinations=document.querySelector(".writeOrdinations");//seleziona dove scrivere
+for (let a = 0; a < arrayCategories.length; a++) {//per tante volte quanto i records dell'array
+    writeOrdinations.innerHTML+=`
+        <h2 id="${arrayCategories[a]}">${arrayCategories[a]}</h2>
+        <div class="generateTitleCategories"></div>
+    `;//aggiungi una ordinationRow
+}
+/*
+    [
+        riga [A,B,C,D,E]
+        riga [A,B,C,D,E]
+        riga [A,B,C,D,E]
+    ]
+*/
     // optimize righe
-    const writeOrdinations=document.querySelector(".writeOrdinations");//seleziona dove scrivere
-    for (let a = 0; a < arrayProducts.length; a++) {//per tante volte quanto i records dell'array
-        writeOrdinations.innerHTML+=`
-            <div class="ordinationRow"></div>
-        `;//aggiungi una ordinationRow
+    const generateTitleCategories=document.querySelectorAll(".generateTitleCategories");
+    console.log(generateTitleCategories);
+    for (let a = 0; a < arrayCategories.length; a++) {//per ogni categoria
+        for (let b = 0; b < arrayProducts[a].length; b++) {//per ogni prodotto
+            generateTitleCategories[b].innerHTML+=`<div class="ordinationRow"></div>`;
+        }
     }
-
-    // optimize ordinationRow
-    const ordinationRow=document.querySelectorAll(".ordinationRow");//seleziona tutte le ordinationRow
-    for (let a = 0; a < ordinationRow.length; a++) {//per tante volte quanto le ordinationRow
-        ordinationRow[a].innerHTML=`
-            <div class="show">
-                <div>
-                    <h2 class="priceFood">${arrayProducts[a].price}€</h2>
-                    <h3 class="nameFood">${arrayProducts[a].name}</h3>
-                    <h4 class="ingredientsFood">${arrayProducts[a].ingredients}</h4>
+/*
+        // optimize cards
+        const ordinationRow=document.querySelectorAll(".ordinationRow");//seleziona tutte le ordinationRow
+        for (let a = 0; a < ordinationRow.length; a++) {//per tante volte quanto le ordinationRow
+            ordinationRow[a].innerHTML=`
+                <div class="show">
+                    <div>
+                        <h2 class="priceFood">${arrayProducts[a].price}€</h2>
+                        <h3 class="nameFood">${arrayProducts[a].name}</h3>
+                        <h4 class="ingredientsFood">${arrayProducts[a].ingredients}</h4>
+                    </div>
                 </div>
-            </div>
 
-            <div class="ordinationAmount">
-                <h3 class="output">0</h3>
-                <button class="increment">+</button>
-                <button class="decrement">-</button>
-                <button class="send">
-                    <img src="https://cdn.icon-icons.com/icons2/2645/PNG/512/cart_icon_160296.png" alt="">   
-                </button>
-            </div>
-        `;//aggiungi il testo
-    }
+                <div class="ordinationAmount">
+                    <h3 class="output">0</h3>
+                    <button class="increment">+</button>
+                    <button class="decrement">-</button>
+                    <button class="send">
+                        <img src="https://cdn.icon-icons.com/icons2/2645/PNG/512/cart_icon_160296.png" alt="">   
+                    </button>
+                </div>
+            `;//aggiungi il testo
+        }
     // optimize immagini
     const show=document.querySelectorAll(".show");
     for (let a = 0; a < show.length; a++) {
@@ -77,3 +94,4 @@
             }
         })
     }
+*/
