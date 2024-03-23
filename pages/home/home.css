@@ -33,23 +33,24 @@
         }
 
  /* TODO ORDINATIONS */
-.writeOrdinations{
-
+.generateOrdinations>h2{
+    padding: 40px 0 20px;
+    border-top: 2px solid var(--c4);
 }
-    /* optimize ordinationRow */
-    .ordinationRow{
+    /* optimize ordinationCard */
+    .ordinationCard{
         padding: 10px 0;
         display: flex;
         justify-content: space-evenly;
     }
-        /* TODO -> show */
-        .show{
+        /* TODO -> cardsImage */
+        .cardsImage{
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: scroll;
         }
-        .show,.show>div{         
+        .cardsImage,.cardsImage>div{         
             width: 200px; height: 160px;
             border-radius: 10px;
 
@@ -58,16 +59,16 @@
             justify-content: flex-end;
             align-items: flex-start; 
         }
-            .show>div{
-                border: 1px solid;
+            .cardsImage>div{
+                border: 2px solid var(--shadow); border-top: 0;
                 background: linear-gradient(transparent,var(--semiTransparent),var(--semiTransparent));
                 color: var(--c1);
             }
-                .show>div>*{
+                .cardsImage>div>*{
                     text-align: left;
                     padding: 5px;
                 }
-                .show .priceFood{
+                .cardsImage .priceFood{
                     position: absolute; top: 0; left: 0;
                     width: 100px;
                     padding:1px 10px;

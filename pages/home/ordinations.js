@@ -1,58 +1,41 @@
 
 // TODO innerHTML
-// writeOrdinations > generateTitleCategories > ordinationRow > show & ordinationAmount
-// optimize titoli di categoria
-const writeOrdinations=document.querySelector(".writeOrdinations");//seleziona dove scrivere
+// generateOrdinations > generateOrdinationsItems > cardsImage & ordinationAmount
+// optimize inserisce i titoli di categoria
+const generateOrdinations=document.querySelector(".generateOrdinations");//seleziona dove scrivere
 for (let a = 0; a < arrayCategories.length; a++) {//per tante volte quanto i records dell'array
-    writeOrdinations.innerHTML+=`
+    generateOrdinations.innerHTML+=`
         <h2 id="${arrayCategories[a]}">${arrayCategories[a]}</h2>
-        <div class="generateTitleCategories"></div>
-    `;//aggiungi una ordinationRow
+        <div class="generateOrdinationsItems"></div>
+    `;
 }
-/*
-    [
-        riga [A,B,C,D,E]
-        riga [A,B,C,D,E]
-        riga [A,B,C,D,E]
-    ]
-*/
-    // optimize righe
-    const generateTitleCategories=document.querySelectorAll(".generateTitleCategories");
-    console.log(generateTitleCategories);
-    for (let a = 0; a < arrayCategories.length; a++) {//per ogni categoria
-        for (let b = 0; b < arrayProducts[a].length; b++) {//per ogni prodotto
-            generateTitleCategories[b].innerHTML+=`<div class="ordinationRow"></div>`;
-        }
-    }
-/*
-        // optimize cards
-        const ordinationRow=document.querySelectorAll(".ordinationRow");//seleziona tutte le ordinationRow
-        for (let a = 0; a < ordinationRow.length; a++) {//per tante volte quanto le ordinationRow
-            ordinationRow[a].innerHTML=`
-                <div class="show">
-                    <div>
-                        <h2 class="priceFood">${arrayProducts[a].price}€</h2>
-                        <h3 class="nameFood">${arrayProducts[a].name}</h3>
-                        <h4 class="ingredientsFood">${arrayProducts[a].ingredients}</h4>
-                    </div>
-                </div>
+    // optimize inserische le singole cards
+    const generateOrdinationsItems=document.querySelectorAll(".generateOrdinationsItems");
 
-                <div class="ordinationAmount">
-                    <h3 class="output">0</h3>
-                    <button class="increment">+</button>
-                    <button class="decrement">-</button>
-                    <button class="send">
-                        <img src="https://cdn.icon-icons.com/icons2/2645/PNG/512/cart_icon_160296.png" alt="">   
-                    </button>
+    for (let a = 0; a < arrayProducts.length; a++) {//
+        for (let b = 0; b < arrayProducts[a].length; b++) {//
+            generateOrdinationsItems[a].innerHTML+=`
+                <div class="ordinationCard">
+                    <div class="cardsImage" style="background-image:url(${arrayProducts[a][b].imageUrl})">
+                        <div>
+                            <h2 class="priceFood">${arrayProducts[a][b].price}€</h2>
+                            <h3 class="nameFood">${arrayProducts[a][b].name}</h3>
+                            <h4 class="ingredientsFood">${arrayProducts[a][b].ingredients}</h4>
+                        </div>
+                    </div>
+
+                    <div class="ordinationAmount">
+                        <h3 class="output">0</h3>
+                        <button class="increment">+</button>
+                        <button class="decrement">-</button>
+                        <button class="send">
+                            <img src="https://cdn.icon-icons.com/icons2/2645/PNG/512/cart_icon_160296.png" alt="">   
+                        </button>
+                    </div>
                 </div>
             `;//aggiungi il testo
         }
-    // optimize immagini
-    const show=document.querySelectorAll(".show");
-    for (let a = 0; a < show.length; a++) {
-        show[a].style.backgroundImage=`url(${arrayProducts[a].imageUrl})`
     }
-
 
 // TODO ordinationAmount
     const ordinationAmount=document.querySelectorAll('.ordinationAmount');
@@ -94,4 +77,3 @@ for (let a = 0; a < arrayCategories.length; a++) {//per tante volte quanto i rec
             }
         })
     }
-*/
