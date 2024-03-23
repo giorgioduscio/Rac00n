@@ -59,7 +59,7 @@
 
 
     /* TODO -> pagine */
-    body#home img#home, body#user img#user, body#cart img#cart{ 
+    body#home img#home,body#ordinations img#ordinations, body#user img#user, body#cart img#cart{ 
         background: var(--c1); 
         border-radius: 5px;
     }
@@ -121,6 +121,7 @@
         .profile button{
             width: 150px;
         }
+    /* optimize intro */
     .intro{
         background: url(https://previews.123rf.com/images/niserin/niserin1405/niserin140500054/28047710-grunge-parete-di-legno-rustico-sfondo-vintage-dettagli-alti-qualit%C3%A0-hd.jpg);
         background-position:center;
@@ -128,14 +129,18 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
-        .intro h3{
-            padding: 10px;
-        }
         .intro>div{
-            padding: 10px 0;
+            min-height: 90vh;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
             background: var(--semiTransparent);
             color:var(--c1);
-        }   #logo{
+        }   
+            #logo{
                 background: transparent;
                 color: var(--t1);
                 font-size: 25px;
