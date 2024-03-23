@@ -33,50 +33,65 @@
         }
 
  /* TODO ORDINATIONS */
-.generateOrdinations>h2{
-    padding: 40px 0 20px;
-    border-top: 2px solid var(--c4);
-}
-    /* optimize ordinationCard */
-    .ordinationCard{
-        padding: 10px 0;
-        display: flex;
-        justify-content: space-evenly;
+.generateOrdinations{}
+    /* optimize titoli di categoria */
+    .generateOrdinations>h2{
+        padding:50px 0;
     }
-        /* TODO -> cardsImage */
-        .cardsImage{
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: scroll;
-        }
-        .cardsImage,.cardsImage>div{         
-            width: 200px; height: 160px;
-            border-radius: 10px;
-
+    /* optimize righe che contengono le cards */
+    .generateOrdinationsItems{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 10px;
+    }
+        /* optimize ordinationCard */
+        .ordinationCard{
+            padding: 1px;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-start; 
-        }
-            .cardsImage>div{
-                border: 2px solid var(--shadow); border-top: 0;
-                background: linear-gradient(transparent,var(--semiTransparent),var(--semiTransparent));
-                color: var(--c1);
-            }
-                .cardsImage>div>*{
-                    text-align: left;
-                    padding: 5px;
-                }
-                .cardsImage .priceFood{
-                    position: absolute; top: 0; left: 0;
-                    width: 100px;
-                    padding:1px 10px;
+            justify-content: space-evenly;
+            gap: 2px;
 
-                    text-align: left;
-                    background: linear-gradient(90deg,var(--t1),transparent);
-                    border-top-left-radius: 10px;
+            background: var(--c2);
+            border: 2px solid transparent;
+            border-radius: 10px;
+        }.ordinationCard:hover{ border-color: var(--t1); }
+            /* TODO -> cardsImage */
+            .cardsImage{
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: scroll;
+            }
+            .cardsImage,.cardsImage>div{         
+                width: 200px; height: 160px;
+                border-radius: 10px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start; 
+            }
+                /* optimize soprafondo semitrasparente */                
+                .cardsImage>div{
+                    background: var(--semiTransparent);
+                    color: var(--c1);
                 }
+                    /* optimize testo sopra l'immagine */
+                    .cardsImage>div>*{
+                        text-align: left;
+                        padding: 5px;
+                    }
+                    .cardsImage .priceFood{
+                        position: absolute; top: 0; left: 0;
+                        width: 100px;
+                        padding:1px 10px;
+
+                        text-align: left;
+                        background: linear-gradient(90deg,var(--t1),transparent);
+                        border-top-left-radius: 10px;
+                    }
         /* TODO -> ordinationAmount */
         .ordinationAmount{
             display: flex;
@@ -85,9 +100,8 @@
             justify-content: flex-start;
         }
             .ordinationAmount .output{
-                height: 30px; width: 30px;
+                height: 40px; width: 40px;
                 margin: 0;
-                padding: 5px;
 
                 display: flex;
                 align-items: center;
@@ -95,22 +109,23 @@
 
                 color: var(--c1);
                 background: var(--t1);
-                border-radius:50%;
-                border:1px solid; border-top: 0;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
             .ordinationAmount button{
-                min-width: 30px;
-                min-height: 30px;
-                margin-top:5px;
-                padding: 5px;
+                min-width: 40px; min-height: 40px;
 
                 font-weight: bold;
                 color: var(--c1);
-                background: var(--c4);
-                border-radius:50%;
-                border:1px solid; border-top: 0;
+                background: radial-gradient(var(--c4),var(--c3));
+                border-radius: 0;
+            }.ordinationAmount button:active{
+                background: radial-gradient(var(--c3),var(--c3));
             }
             .ordinationAmount .send{
                 background: var(--t1);
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+
             }
         

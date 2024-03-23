@@ -18,7 +18,7 @@ for (let a = 0; a < arrayCategories.length; a++) {//per tante volte quanto i rec
                 <div class="ordinationCard">
                     <div class="cardsImage" style="background-image:url(${arrayProducts[a][b].imageUrl})">
                         <div>
-                            <h2 class="priceFood">${arrayProducts[a][b].price}€</h2>
+                            <h3 class="priceFood">${arrayProducts[a][b].price}€</h3>
                             <h3 class="nameFood">${arrayProducts[a][b].name}</h3>
                             <h4 class="ingredientsFood">${arrayProducts[a][b].ingredients}</h4>
                         </div>
