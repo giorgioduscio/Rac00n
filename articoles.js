@@ -86,7 +86,7 @@ for (let a = 0; a < databaseProducts.length; a++) {
         arrayCategories.push(databaseProducts[a].category)
     }
 }
-console.log("array di categorie",arrayCategories);
+console.log("arrayCategories:",arrayCategories);
 
 // TODO arrayProduct: drea un 'array di array di oggetti' dall'array originale
 const arrayProducts=[]
@@ -102,4 +102,4 @@ for (let a = 0; a < arrayCategories.length; a++) { // opera le categorie
         }
     }    
 }
-console.log("Array di prodotti:",arrayProducts);
+console.log("arrayProducts:",arrayProducts);

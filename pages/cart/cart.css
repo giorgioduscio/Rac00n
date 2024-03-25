@@ -21,6 +21,35 @@
     }.tableItem:active{
         border-color: var(--c1);
     }
+ /* TODO cronology */
+.cart{
+    padding: 10px;
+}
+    .cart table{
+        margin-bottom: 10px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+        .cart td{
+            font-size: 16px;
+            margin: 0;
+            padding: 5px 0;
+        }
+        .cart .cartFoodName::before{
+            content: '';
+            min-height: 8px;
+            width: 8px;
+            display: inline-block;
+            margin-right: 10px;
+
+            transform: rotate(45deg);
+            background: var(--t1);
+            border-radius: 50%;
+        }
+    .cartButton{
+        padding: 10px;
+        background: var(--t1);
+    }
 
  /* TODO cronology */
 .writeCronology{
