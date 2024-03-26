@@ -8,7 +8,7 @@ const voci=[
 ]
 let  pen=document.querySelector('#pen');
 for (let a = 0; a < gruppo.length; a++) {
-    pen.innerHTML+=`<h4>${gruppo[a]}</h4>`;//mostra gruppo
+    pen.innerHTML+=`<h3>${gruppo[a]}</h3>`;//mostra gruppo
 
     for (let b = 0; b < voci[a].length; b++) {
         pen.innerHTML+=`
