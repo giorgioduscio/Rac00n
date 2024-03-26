@@ -6,12 +6,13 @@ const voci=[
     ["Aggiungi account","Sicurezza","Esci"],
     ["Chiedi aiuto","Termini di servizio","Norme sulla privacy","Informazioni",]
 ]
-let  pen=document.querySelector('#pen');
+// optimize generateGroups
+let  generateGroups=document.querySelector('#generateGroups');
 for (let a = 0; a < gruppo.length; a++) {
-    pen.innerHTML+=`<h3>${gruppo[a]}</h3>`;//mostra gruppo
+    generateGroups.innerHTML+=`<h3>${gruppo[a]}</h3>`;//mostra gruppo
 
     for (let b = 0; b < voci[a].length; b++) {
-        pen.innerHTML+=`
+        generateGroups.innerHTML+=`
             <div class="dropdown">
                 <button class="dropButton">${voci[a][b]}</button>
             </div>

@@ -26,14 +26,15 @@
     
  /* TODO LAYOUT */
     /* TODO - navigation */
-    nav{ z-index: 1; }
-        nav>row{
-            align-items: center;
-            justify-content: space-evenly;
-        }
+    nav{ 
+        z-index: 1; 
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
         nav img{
             height:35px;
-            padding:3px;
+            padding:5px;
         }
      /* optimize TOP */    
     nav.top{
@@ -45,6 +46,9 @@
             background: var(--c1);
             border-radius: 50%;
         }
+    #home nav.top, #user nav.top{
+        display: none;
+    }
     /* optimize BOTTOM */
     nav.bottom{
         position: fixed; 
@@ -126,6 +130,13 @@
         .profile button{
             width: 150px;
         }
+
+    header::after{
+        content: '';
+        height: 100px;
+        display: block;
+        background: linear-gradient(var(--t1),var(--c3));
+    }
     /* optimize intro */
     .intro{
         background: url(https://previews.123rf.com/images/niserin/niserin1405/niserin140500054/28047710-grunge-parete-di-legno-rustico-sfondo-vintage-dettagli-alti-qualit%C3%A0-hd.jpg);

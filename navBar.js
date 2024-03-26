@@ -4,8 +4,9 @@ const cartUrlImage="https://cdn.icon-icons.com/icons2/2645/PNG/512/cart_icon_160
 const userUrlImage="https://cdn-icons-png.freepik.com/512/6337/6337309.png";
 const searchUrlImage="https://cdn.icon-icons.com/icons2/621/PNG/512/magnifier-1_icon-icons.com_56924.png";
 const feedUrlImage="https://png.pngtree.com/png-clipart/20230418/original/pngtree-bell-line-icon-png-image_9065349.png";
+
 // optimize barra in alto
-    document.querySelector("nav.top").innerHTML=`
+    const navtop=document.querySelector("nav.top").innerHTML=`
         <row>
             <searchBar>
                 <input type="text" placeholder="Ricerca">
@@ -15,21 +16,21 @@ const feedUrlImage="https://png.pngtree.com/png-clipart/20230418/original/pngtre
             </searchBar>
         </row>
     `;
+
+
 // optimize barra in basso
-    document.querySelector("nav.bottom").innerHTML=`
-        <row>
-            <a href="/home.html">
-                <img id="home" src="${homeUrlImage}">
-            </a>
-            <a href="/pages/ordinations/ordinations.html">
-                <img id="ordinations" src="${ordinationsUrlImage}">
-            </a>
-            <a href="/pages/cart/cart.html">
-                <img id="cart" src="${cartUrlImage}">
-                <div id="pointCart">!</div>
-            </a>
-            <a href="/pages/user/user.html">
-                <img id="user" src="${userUrlImage}">
-            </a>
-        </row>
+const navbottom=document.querySelector("nav.bottom").innerHTML=`
+        <a href="/index.html">
+            <img id="home" src="${homeUrlImage}">
+        </a>
+        <a href="/pages/ordinations/ordinations.html">
+            <img id="ordinations" src="${ordinationsUrlImage}">
+        </a>
+        <a href="/pages/cart/cart.html">
+            <img id="cart" src="${cartUrlImage}">
+            <div id="pointCart">!</div>
+        </a>
+        <a href="/pages/user/user.html">
+            <img id="user" src="${userUrlImage}">
+        </a>
     `;
