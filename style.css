@@ -107,12 +107,17 @@
         }
 
     /* TODO - header */
+    
     header{
         min-height: 100px;
         margin:0;
         background: var(--t1);
         color:var(--c1);
     }
+        header>h2{
+            padding: 40px 0 20px;
+            text-align: center;
+        }
         header>*{ padding: 10px; }
         .profile img{
             width: 150px;

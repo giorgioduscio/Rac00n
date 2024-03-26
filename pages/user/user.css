@@ -4,7 +4,7 @@ img#profileImg{
     margin-bottom: 10px;
     border-radius: 50%;
 }
-p#profileOutput{
+#profileOutput{
     margin: 10px 0 ;
     text-align: center;
 }
@@ -16,10 +16,6 @@ button#profileButton{
 
 
 /* TODO dropdown */
-header>h2{
-    padding: 40px 0;
-    text-align: center;
-}
 #pen h3{
     padding: 40px 0 10px;
 }
