@@ -103,6 +103,7 @@
             .ordinationAmount .output{
                 height: 40px; width: 40px;
                 margin: 0;
+                font-size: 20px;
 
                 display: flex;
                 align-items: center;

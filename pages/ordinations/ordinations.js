@@ -25,7 +25,7 @@ for (let a = 0; a < arrayCategories.length; a++) {//per tante volte quanto i rec
                     </div>
 
                     <div class="ordinationAmount">
-                        <h3 class="output">0</h3>
+                        <div class="output">0</div>
                         <button class="increment">+</button>
                         <button class="decrement">-</button>
                         <button class="send">

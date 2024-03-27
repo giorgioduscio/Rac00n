@@ -1,3 +1,7 @@
+#user h3{
+    text-align: center;
+}
+ 
  /* TODO profilo */
 #profile{
     display: flex;
