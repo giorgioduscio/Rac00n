@@ -161,9 +161,8 @@
             }
     /* TODO - section */
     section{
-        background-color:var(--c3);
         min-height: 50vh;
-        padding:30px 0px;
+        background-color:var(--c3);
         color:var(--c5);
     }
 
@@ -180,19 +179,6 @@
         background: var(--t1);
     }
 
-    /* TODO -> row */
-    row{
-        display: flex;
-        justify-content:space-around;
-        align-items: top;
-    }
-    /* TODO -> column */
-    column{
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-    }
-
  /* TODO COMPONENTI */
     /* TODO - testo */
     h1{ font-size:40px; }
@@ -203,7 +189,7 @@
     h6{ font-size:5px; }
     p{ font-size:15px ;}
 
-    header>h2,section>h2{
+    h2,h3{
         padding: 40px 0 20px;
         text-align: center;
     }

@@ -23,39 +23,50 @@
         }
  /* TODO carrello attuale */
     .cart{
-        padding: 10px;
+        padding: 5px;
     }
-        .cart table{
-            margin-bottom: 10px;
+        .cart>div{
+            padding: 5px;
+            background: var(--c2);
+            border-radius: 10px;
         }
-        .cartButton{
-            padding: 10px;
-            background: var(--t1);
-        }
+            .cart table{
+                margin-bottom: 20px;
+            }
+            .cartFoodName{
+                width: 100%;
+            }
+            .cartButton{
+                padding: 10px;
+                background: var(--t1);
+            }
 
  /* TODO cronology */
-.generateCronology{}
-    .generateCronology>div{
+#generateCronology{}
+    #generateCronology>div{
         padding: 5px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         gap: 5px;
     }
-        .stateCheck,.stateLoading{
+        /* optimize STATO ORDINAZIONE */
+        .ordinationState{
             min-width: 30px;
             min-height: 30px;
             border-radius: 50%;
-            border: 1px solid green;
+            border: 1px solid transparent;
         }
-        .stateLoading{
-            border: 0;
-            animation-name: stateLoadingAnimation;
-            animation-duration: 0.5s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
-            .stateLoading::after{
+            .arrived{
+                background: green;
+            }
+            .pending{
+                animation-name: ordinationStateAnimation;
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            .pending::after{
                 content: '';
                 width: 5px;
                 height: 5px;
@@ -63,12 +74,13 @@
                 background: red;
                 border-radius: 50%;
             }
-            @keyframes stateLoadingAnimation{
+            @keyframes ordinationStateAnimation{
                 0%{transform: rotate(0deg);}
                 100%{transform: rotate(360deg);}
             }
 
-        .card{
+        /* optimize CARDS */
+        .cards{
             width: 100%;
             padding: 5px;
 
@@ -76,6 +88,9 @@
             border: 1px solid var(--semiTransparent); border-top-width:0;
             border-radius: 10px;
             text-align: left;
+        }
+        .cronologyFoodName{
+            width: 100%;
         }
 
 

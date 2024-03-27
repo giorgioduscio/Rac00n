@@ -12,7 +12,6 @@ function CartObject(name,price) {
 new CartObject(arrayProducts[0][0].name,arrayProducts[0][0].price)
 new CartObject(arrayProducts[0][1].name,arrayProducts[0][1].price)
 new CartObject(arrayProducts[0][0].name,arrayProducts[0][0].price)
-console.log(arrayCart);
 
 // TODO innerHTML
 const generateCartItems=document.querySelector('.generateCartItems');

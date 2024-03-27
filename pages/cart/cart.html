@@ -19,30 +19,20 @@
         </header>
 
         <section>
-            <h2>Carrello attuale</h2> <!-- optimize CARRELLO -->
+            <!-- optimize CARRELLO -->
+            <h2>Carrello attuale</h2> 
             <div class="cart"> 
-                <table>
-                    <tbody class="generateCartItems">
-                    </tbody>                    
-                </table>
-                <button class="cartButton">Ordina e paga</button>
-            </div>
-            
-            <h2>Cronologia</h2> <!-- optimize CRONOLOGIA -->
-            <div class="generateCronology">
                 <div>
-                    <div class="stateLoading"></div>
-                    <div class="card">
-                        <h3>Mar 16/23/22</h3>
-                        <table>
-                            <tr><td class="cronologyFoodName">Carne</td><td class="cronologyFoodPrice">18€</td></tr>
-                            <tr><td class="cronologyFoodName">Carne</td><td class="cronologyFoodPrice">18€</td></tr>
-                            <tr><td class="cronologyFoodName">Carne</td><td class="cronologyFoodPrice">18€</td></tr>
-                        </table>
-                    </div>
+                    <table>
+                        <tbody class="generateCartItems"></tbody>                    
+                    </table>
+                    <button class="cartButton">Ordina e paga</button>
                 </div>
             </div>
 
+            <!-- optimize CRONOLOGIA -->
+            <h2>Cronologia</h2> 
+            <div id="generateCronology"></div>
         </section>
 
         <footer></footer><!-- TODO footer -->

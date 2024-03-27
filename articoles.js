@@ -94,8 +94,8 @@ for (let a = 0; a < arrayCategories.length; a++) {
     // aggiunge un sotto-array per ogni categoria
     arrayProducts.push([])
 }
-for (let a = 0; a < arrayCategories.length; a++) { // opera le categorie
-    for (let b = 0; b < databaseProducts.length; b++) { // opera gli ogetti
+for (let a = 0; a < arrayCategories.length; a++) { // per ogni categoria
+    for (let b = 0; b < databaseProducts.length; b++) { // per ogni ogetto
         // se l'elemento è della categoria, aggiungilo
         if (arrayCategories[a] == databaseProducts[b].category) {
             arrayProducts[a].push( databaseProducts[b] )
