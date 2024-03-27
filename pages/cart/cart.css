@@ -27,54 +27,56 @@
     }
         .cart table{
             margin-bottom: 10px;
-            width: 100%;
-            border-collapse: collapse;
         }
-            .cart td{
-                font-size: 16px;
-                margin: 0;
-                padding: 5px 0;
-            }
-            .cart .cartFoodName::before{
-                content: '';
-                min-height: 8px;
-                width: 8px;
-                display: inline-block;
-                margin-right: 10px;
-
-                transform: rotate(45deg);
-                background: var(--t1);
-                border-radius: 50%;
-            }
         .cartButton{
             padding: 10px;
             background: var(--t1);
         }
 
  /* TODO cronology */
-.generateCronology{
-    border: 1px solid;
-}
+.generateCronology{}
     .generateCronology>div{
+        padding: 5px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 10px;
+        gap: 5px;
     }
-        .state{
-            width: 30px;
-            height: 30px;
+        .stateCheck,.stateLoading{
+            min-width: 30px;
+            min-height: 30px;
             border-radius: 50%;
-            background: var(--t1);
-        }        
+            border: 1px solid green;
+        }
+        .stateLoading{
+            border: 0;
+            animation-name: stateLoadingAnimation;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+            .stateLoading::after{
+                content: '';
+                width: 5px;
+                height: 5px;
+                display: inline-block;
+                background: red;
+                border-radius: 50%;
+            }
+            @keyframes stateLoadingAnimation{
+                0%{transform: rotate(0deg);}
+                100%{transform: rotate(360deg);}
+            }
+
         .card{
             width: 100%;
+            padding: 5px;
+
             background: var(--c2);
+            border: 1px solid var(--semiTransparent); border-top-width:0;
             border-radius: 10px;
             text-align: left;
         }
-            .card td{
-                padding: 10px;
-            }
+
 
         
