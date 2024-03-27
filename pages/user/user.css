@@ -1,21 +1,27 @@
-/* TODO profilo */
-img#profileImg{
-    width: 150px;
-    margin-bottom: 10px;
-    border-radius: 50%;
+ /* TODO profilo */
+#profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
-#profileOutput{
-    margin: 10px 0 ;
-    text-align: center;
-}
-button#profileButton{
-    padding: 10px 20px;
-    background: var(--c2);
-    border-radius: 50px;
-}
+    img#profileImg{
+        width: 150px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+    #profile>div{
+        margin: 10px 0 ;
+        text-align: center;
+    }
+    button#profileButton{
+        padding: 10px 20px;
+        background: var(--c2);
+        border-radius: 50px;
+    }
 
 
-/* TODO dropdown */
+ /* TODO dropdown */
 #generateGroups h3{
     padding: 40px 0 10px;
 }
