@@ -1,76 +1,80 @@
  /* TODO tavoli */
-.generateTables{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    overflow-x: scroll;
-    gap: 10px;
-}
-    .tableItem{
-        min-height: 80px;
-        min-width: 80px;
-
+    .generateTables{
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
 
-        border: 2px solid transparent;
-        background: var(--c5);
-        border-radius: 50%;
-    }.tableItem:active{
-        border-color: var(--c1);
+        overflow-x: scroll;
+        gap: 10px;
     }
- /* TODO cronology */
-.cart{
-    padding: 10px;
-}
-    .cart table{
-        margin-bottom: 10px;
-        width: 100%;
-        border-collapse: collapse;
-    }
-        .cart td{
-            font-size: 16px;
-            margin: 0;
-            padding: 5px 0;
-        }
-        .cart .cartFoodName::before{
-            content: '';
-            min-height: 8px;
-            width: 8px;
-            display: inline-block;
-            margin-right: 10px;
+        .tableItem{
+            min-height: 80px;
+            min-width: 80px;
 
-            transform: rotate(45deg);
-            background: var(--t1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 2px solid transparent;
+            background: var(--c5);
             border-radius: 50%;
+        }.tableItem:active{
+            border-color: var(--c1);
         }
-    .cartButton{
+ /* TODO carrello attuale */
+    .cart{
         padding: 10px;
-        background: var(--t1);
     }
+        .cart table{
+            margin-bottom: 10px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+            .cart td{
+                font-size: 16px;
+                margin: 0;
+                padding: 5px 0;
+            }
+            .cart .cartFoodName::before{
+                content: '';
+                min-height: 8px;
+                width: 8px;
+                display: inline-block;
+                margin-right: 10px;
+
+                transform: rotate(45deg);
+                background: var(--t1);
+                border-radius: 50%;
+            }
+        .cartButton{
+            padding: 10px;
+            background: var(--t1);
+        }
 
  /* TODO cronology */
-.writeCronology{
-    padding:5px;
+.generateCronology{
+    border: 1px solid;
 }
-    .cronologyCard{
-        margin: 5px 0;
-        border: 1px solid ;
-        border-radius: 10px;
+    .generateCronology>div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
     }
-        .cronologyCard>row{
-            padding:5px 10px;
-            justify-content: space-between;
+        .state{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--t1);
+        }        
+        .card{
+            width: 100%;
+            background: var(--c2);
+            border-radius: 10px;
+            text-align: left;
         }
-.name::before{
-    content: '';
-    margin-right: 5px;
-    width: 8px;
-    height: 10px;
-    transform: rotate(40deg);
-    display: inline-block;
-    background: var(--t1);
-    border-radius: 50%;
-}
+            .card td{
+                padding: 10px;
+            }
+
+        
