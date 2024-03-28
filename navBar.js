@@ -36,7 +36,6 @@ navbottom.innerHTML=`
 
 // TODO router
     navbottom.addEventListener('click',function(event){
-            console.log('event',event.target.id);
         if (event.target.id==='home') {
             document.body.id='homePage'
         }

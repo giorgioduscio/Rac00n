@@ -1,6 +1,8 @@
  /* TODO Index */
 .generateIndex{
         height: 150px;
+        padding: 10px;
+        
         overflow-x:scroll;
 
         display: flex;

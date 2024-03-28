@@ -62,13 +62,23 @@
     }
 
 
-    /* TODO -> pagine */
+    /* TODO -> cambiamenti stile sulle pagine */
     body#homePage img#home,
     body#ordinationsPage img#ordinations, 
     body#cartPage img#cart{ 
         background: var(--c1); 
         border-radius: 5px;
     }
+    
+    #homePage #videoOpening,#homePage #opening{ display: block; }
+    #ordinationsPage div#index,#ordinationsPage div#ordination{ display: block; }
+    #cartPage div#tables,#cartPage div#cart,#cartPage div#cronology{ display: block; }
+
+    div#videoOpening,div#opening,
+    div#index,div#ordination,
+    div#tables,div#cart,div#cronology
+    { display: none; }
+
         div#pointCart{
             height:15px;
             width: 15px;
