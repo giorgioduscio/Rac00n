@@ -127,13 +127,6 @@
             width: 150px;
         }
 
-    header::after{
-        content: '';
-        height: 100px;
-        display: block;
-        background: linear-gradient(var(--t1),var(--c3));
-    }
-
 
     /* TODO - section */
     section{
