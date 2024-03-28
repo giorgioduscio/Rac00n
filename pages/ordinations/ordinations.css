@@ -38,9 +38,7 @@
  /* TODO ORDINATIONS */
 .generateOrdinations{}
     /* optimize titoli di categoria */
-    .generateOrdinations>h2{
-        padding:50px 0;
-    }
+    .generateOrdinations>h2{}
     /* optimize righe che contengono le cards */
     .generateOrdinationsItems{
         display: flex;
@@ -78,7 +76,7 @@
             }
                 /* optimize soprafondo semitrasparente */                
                 .cardsImage>div{
-                    background: var(--semiTransparent);
+                    background:linear-gradient(45deg,var(--c5),transparent);
                     color: var(--c1);
                 }
                     /* optimize testo sopra l'immagine */
