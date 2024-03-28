@@ -28,6 +28,11 @@ function Table(id,state) {
     new Table ('O276',true)
 
 // TODO tavoli
+    document.querySelector('#tables').innerHTML=`
+        <h2>Seleziona tavolo</h2>
+        <h3>Tavoli disponibili</h3>
+        <div class="generateTables"></div>
+    `;
     // optimize crea tutti i tavoli 
     const generateTables=document.querySelector('.generateTables')
     for (let a = 0; a < arrayTables.length; a++) { //per ogni tavolo

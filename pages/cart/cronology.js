@@ -34,8 +34,10 @@ const arrayCronology=[
     }
 ];
 
-    
-console.log('arrayCronology\n',arrayCronology);
+document.querySelector('#cronology').innerHTML=`
+    <h2>Cronologia</h2> 
+    <div id="generateCronology"></div>
+`;  
 
 // TODO inner html
     const generateCronology=document.getElementById('generateCronology')

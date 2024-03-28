@@ -1,3 +1,16 @@
+// TODO Cart
+document.querySelector('#cart').innerHTML=`
+    <h2>Carrello attuale</h2> 
+    <div class="cart"> 
+        <div>
+            <table>
+                <tbody class="generateCartItems"></tbody>                    
+            </table>
+            <button class="cartButton">Ordina e paga</button>
+        </div>
+    </div>
+`;
+
 // TODO ordinazioni > arrayCart
 const arrayCart=[]
 function CartObject(name,price) {
