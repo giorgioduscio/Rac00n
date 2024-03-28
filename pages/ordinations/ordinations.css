@@ -36,9 +36,6 @@
         }
 
  /* TODO ORDINATIONS */
-.generateOrdinations{}
-    /* optimize titoli di categoria */
-    .generateOrdinations>h2{}
     /* optimize righe che contengono le cards */
     .generateOrdinationsItems{
         display: flex;
