@@ -63,7 +63,9 @@
 
 
     /* TODO -> pagine */
-    body#home img#home,body#ordinations img#ordinations, body#user img#user, body#cart img#cart{ 
+    body#homePage img#home,
+    body#ordinationsPage img#ordinations, 
+    body#cartPage img#cart{ 
         background: var(--c1); 
         border-radius: 5px;
     }
@@ -119,15 +121,6 @@
         color:var(--c1);
     }
 
-        .profile img{
-            width: 150px;
-            border-radius: 50%;
-        }
-        .profile button{
-            width: 150px;
-        }
-
-
     /* TODO - section */
     section{
         min-height: 50vh;
@@ -136,51 +129,11 @@
     }
 
     /* TODO - footer */
-    footer::before{
-        content: '';
-        width: 100%;
-        height: 100px;
-        display: block;    
-        background: linear-gradient(var(--c3),var(--t1));
-    }
     footer{
         min-height:100px;
         background: var(--t1);
     }
 
-    /* TODO HOME */
-    #videoOpening{
-    }
-        #videoOpening>div{
-        height: 600px;
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
-            background: var(--semiTransparent);
-        }
-            #videoOpening video{
-                height: 100%;
-            }
-
-        #opening>a{
-            min-height: 100px;
-            margin-bottom:5px;
-            padding: 10px;
-
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            color: var(--c5);
-            background: linear-gradient(320deg,var(--c1),var(--c3));
-        }
-            #opening h3{
-                padding-bottom: 15px;
-            }
-            #opening img{
-                width: 100px;
-                border-radius: 10px;
-            }
 
  /* TODO COMPONENTI */
     /* TODO - testo */

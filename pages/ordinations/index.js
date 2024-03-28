@@ -1,6 +1,6 @@
 
 // optimize innerhtml
-document.querySelector(".index").innerHTML=
+document.querySelector("#index").innerHTML=
 `<h2>Categorie</h2><div class="generateIndex"></div>`;
 
 const generateIndex=document.querySelector(".generateIndex")

@@ -6,7 +6,8 @@ const searchUrlImage="https://cdn.icon-icons.com/icons2/621/PNG/512/magnifier-1_
 const feedUrlImage="https://png.pngtree.com/png-clipart/20230418/original/pngtree-bell-line-icon-png-image_9065349.png";
 
 // optimize barra in alto
-    const navtop=document.querySelector("nav.top").innerHTML=`
+    const navtop= document.querySelector("nav.top")
+    navtop.innerHTML=`
         <row>
             <searchBar>
                 <input type="text" placeholder="Ricerca">
@@ -19,18 +20,30 @@ const feedUrlImage="https://png.pngtree.com/png-clipart/20230418/original/pngtre
 
 
 // optimize barra in basso
-const navbottom=document.querySelector("nav.bottom").innerHTML=`
-        <a href="/index.html">
-            <img id="home" src="${homeUrlImage}">
-        </a>
-        <a href="/pages/ordinations/ordinations.html">
-            <img id="ordinations" src="${ordinationsUrlImage}">
-        </a>
-        <a href="/pages/cart/cart.html">
-            <img id="cart" src="${cartUrlImage}">
-            <div id="pointCart">!</div>
-        </a>
-        <a href="/pages/user/user.html">
-            <img id="user" src="${userUrlImage}">
-        </a>
-    `;
+const navbottom= document.querySelector("nav.bottom")
+navbottom.innerHTML=`
+    <div>
+        <img id="home" src="${homeUrlImage}">
+    </div>
+    <div>
+        <img id="ordinations" src="${ordinationsUrlImage}">
+    </div>
+    <div>
+        <img id="cart" src="${cartUrlImage}">
+        <div id="pointCart">!</div>
+    </div>
+`;
+
+// TODO router
+    navbottom.addEventListener('click',function(event){
+            console.log('event',event.target.id);
+        if (event.target.id==='home') {
+            document.body.id='homePage'
+        }
+        if (event.target.id==='ordinations') {
+            document.body.id='ordinationsPage'
+        }
+        if (event.target.id==='cart') {
+            document.body.id='cartPage'
+        }
+    })
