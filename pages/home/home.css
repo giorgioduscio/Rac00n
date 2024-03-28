@@ -1,7 +1,10 @@
  /* TODO HOME */
+ #homePage header{
+    padding: 0;
+}
     /* optimize video */
     #videoOpening>div{
-    height: 600px;
+    height: 400px;
     display: flex;
     justify-content: center;
     overflow: hidden;

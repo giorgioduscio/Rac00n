@@ -1,8 +1,12 @@
 // TODO video
 const videoOpening=document.querySelector("#videoOpening")
 videoOpening.innerHTML=`
+    <nav>
+        <button>Ordina subito</button>
+        <button>Registrati</button>
+    </nav>
     <div>
-        <video autoplay loop src="https://videocdn.cdnpk.net/joy/content/video/free/video0457/large_preview/_import_60b8cac1e1b2a3.70854678.mp4" ></video>
+        <video autoplay loop src="/pages/home/videoRistorante.mp4" ></video>
     </div>
 `;
 
