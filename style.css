@@ -16,11 +16,7 @@
         border: 0;
         outline: none;
         position: relative;
-        font-family:monospace;
-    }
-    html,body{
-        min-height:100vh;
-        background:var(--t1);
+        font-family:cursive;
     }
 
     
@@ -37,39 +33,67 @@
             padding:5px;
         }
      /* optimize TOP */    
-    nav.top{
+    /*nascondi nella home e nel carrello*/
+    nav.top{ display: none; } 
+    #ordinationsPage nav.top{
         position: sticky; top:0px;
-        padding: 5px;
+        padding: 10px ;
+        display: block;
     }
         nav.top a>img{
             height: 30px;
             background: var(--c1);
             border-radius: 50%;
         }
-    #home nav.top, #user nav.top{
-        display: none;
-    }
+
+        /* TODO -> searchBar */
+        searchBar{
+            padding-right: 5px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background:var(--c1);
+            border-radius: 50px;
+        }
+            searchBar>input{
+                min-height:10px;
+                padding:10px;
+
+                border:0;
+                border-radius:50px;
+                
+                background:transparent;
+                color:var(--c5);
+            }searchBar>input::placeholder{
+                color:var(--c5);
+            }
+            searchBar>button{
+                padding: 0;
+                background:transparent;
+            }
+
     /* optimize BOTTOM */
     nav.bottom{
         position: fixed; 
         bottom:0px;
-
         width:100%;
         padding-top: 2px;
-    }
-    nav.bottom{
         background: var(--t1);
     }
 
 
-    /* TODO -> cambiamenti stile sulle pagine */
+    /* TODO cambiamenti stile sulle pagine */
+    /* in base alla pagina, i pulsanti si illuminano */
     body#homePage img#home,
     body#ordinationsPage img#ordinations, 
     body#cartPage img#cart{ 
         background: var(--c1); 
-        border-radius: 5px;
+        border-radius: 10px;
     }
     
+    /* in base alla pagina, i contenuti vengono mostrati */
     #homePage #videoOpening,#homePage #opening{ display: block; }
     #ordinationsPage div#index,#ordinationsPage div#ordination{ display: block; }
     #cartPage div#tables,#cartPage div#cart,#cartPage div#cronology{ display: block; }
@@ -94,33 +118,7 @@
             background: var(--c1);
             border-radius: 50%;
         }
-    /* TODO -> searchBar */
-    searchBar{
-        padding-right: 5px;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        background:var(--c1);
-        border-radius: 50px;
-    }
-        searchBar>input{
-            min-height:10px;
-            padding:10px;
-
-            border:0;
-            border-radius:50px;
-            
-            background:transparent;
-            color:var(--c5);
-        }searchBar>input::placeholder{
-            color:var(--c5);
-        }
-        searchBar>button{
-            padding: 0;
-            background:transparent;
-        }
 
     /* TODO - header */
     

@@ -1,31 +1,31 @@
-    /* TODO HOME */
-        #videoOpening>div{
-        height: 600px;
+ /* TODO HOME */
+    /* optimize video */
+    #videoOpening>div{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+        background: var(--semiTransparent);
+    }
+        #videoOpening video{
+            height: 100%;
+        }
+    /* optimize card */
+    #opening>*{
+        min-height: 100px;
+        padding: 10px;
+
         display: flex;
-        justify-content: center;
-        overflow: hidden;
-            background: var(--semiTransparent);
+        align-items: center;
+        gap: 10px;
+
+        color: var(--c5);
+        background: linear-gradient(320deg,var(--c1),var(--c3));
+    }
+        #opening h3{
+            padding-bottom: 15px;
         }
-            #videoOpening video{
-                height: 100%;
-            }
-
-        #opening>a{
-            min-height: 100px;
-            margin-bottom:5px;
-            padding: 10px;
-
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            color: var(--c5);
-            background: linear-gradient(320deg,var(--c1),var(--c3));
+        #opening img{
+            width: 100px;
+            border-radius: 10px;
         }
-            #opening h3{
-                padding-bottom: 15px;
-            }
-            #opening img{
-                width: 100px;
-                border-radius: 10px;
-            }
