@@ -1,8 +1,11 @@
 
 // optimize innerhtml
-const writeIndex=document.querySelector(".writeIndex");
+document.querySelector(".index").innerHTML=
+`<h2>Categorie</h2><div class="generateIndex"></div>`;
+
+const generateIndex=document.querySelector(".generateIndex")
 for (let a = 0; a < arrayCategories.length; a++) {
-    writeIndex.innerHTML+=`
+    generateIndex.innerHTML+=`
         <a href="#${arrayCategories[a]}" class="IndexCard">
             <h3>${arrayCategories[a]}</h3>
         </a>

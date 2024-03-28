@@ -2,6 +2,9 @@
 // TODO innerHTML
 // generateOrdinations > generateOrdinationsItems > cardsImage & ordinationAmount
 // optimize inserisce i titoli di categoria
+document.querySelector('#ordination').innerHTML=
+`<h2>Ordinazioni</h2><div class="generateOrdinations"></div>`;
+
 const generateOrdinations=document.querySelector(".generateOrdinations");//seleziona dove scrivere
 for (let a = 0; a < arrayCategories.length; a++) {//per tante volte quanto i records dell'array
     generateOrdinations.innerHTML+=`
