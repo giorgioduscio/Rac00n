@@ -6,7 +6,15 @@ videoOpening.innerHTML=`
         <button>Registrati</button>
     </nav>
     <div>
-        <video autoplay loop src="/pages/home/videoRistorante.mp4" ></video>
+        <div id="cut">
+            <video autoplay loop src="/pages/home/videoRistorante.mp4" ></video>
+        </div>
+        <div id="text">
+            <h2>Ordina i tuoi piatti preferiti del ricettario del procione</h2>
+            <p>Scegli di tutto! Dalla pizza, al fast food, alla cucina orientale.</p>
+            <div><button>Comuncia</button></div>
+            
+        </div>
     </div>
 `;
 
